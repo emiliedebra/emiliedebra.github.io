@@ -1,54 +1,83 @@
 <template>
-  <div id="app">
-    <header>
-      <span>Vue.js PWA</span>
-    </header>
-    <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
-      <router-view></router-view>
-    </main>
-  </div>
+  <v-app>
+    <v-container fill-height>
+      <v-flex column>
+        <transition name='fade'>
+          <name-bar></name-bar>
+        </transition>
+        <title-bar v-if="enter" @changePage="change"></title-bar>
+        <enter-bar v-if="!enter" @enter="enterCV"></enter-bar>
+        <!-- <router-view></router-view> -->
+      </v-flex>
+    </v-container>
+    <page-view v-if="enter" :pressed="pageButton"></page-view>
+  </v-app>
 </template>
 
 <script>
+import NameBar from '../src/components/NameBar.vue';
+import TitleBar from '../src/components/TitleBar.vue';
+import EnterBar from '../src/components/EnterBar.vue';
+import PageView from '../src/pages/PageView.vue';
+
 export default {
-  name: 'app'
-}
+  name: 'app',
+  data() {
+    return {
+      enter: false,
+      pageButton: 'about',
+    };
+  },
+  computed: {
+  },
+  methods: {
+    enterCV() {
+      this.enter = true;
+      // do name-bar transition
+    },
+    change(prop) {
+      switch (prop) {
+        case 0:
+          this.pageButton = 'about';
+          break;
+        case 1:
+          this.pageButton = 'education';
+          break;
+        case 2:
+          this.pageButton = 'skills';
+          break;
+        case 3:
+          this.pageButton = 'contact';
+          break;
+        default:
+          this.pageButton = null;
+      }
+    },
+  },
+  components: {
+    NameBar,
+    TitleBar,
+    EnterBar,
+    PageView,
+  },
+};
 </script>
 
 <style>
 body {
   margin: 0;
 }
+.fade-enter-active {
+  transition: opacity .5s
+}
+
+.fade-enter /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0
+}
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
   color: #2c3e50;
-}
-
-main {
-  text-align: center;
-  margin-top: 40px;
-}
-
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #35495E;
-  color: #ffffff;
-}
-
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
+  background-color: #f9fbe7;
 }
 </style>
