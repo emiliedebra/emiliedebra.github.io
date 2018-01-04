@@ -1,12 +1,8 @@
 <template>
-  <v-container fill-height class="welcome-container">
-    <v-container flat class="text-xs-center">
-      <v-container class="text-xs-right">
-        <v-btn @click.native="enter" flat icon>
-          <v-icon>arrow_forward</v-icon>
-        </v-btn>
-      </v-container>
-    </v-container>
+  <v-container pa-0 class="text-xs-center">
+    <v-btn @click.native="enter" flat icon>
+      <v-icon>keyboard_arrow_down</v-icon>
+    </v-btn>
   </v-container>
 </template>
 
@@ -22,9 +18,4 @@ export default {
 };
 </script>
 <style>
-  #welcome-container {
-    padding: 0;
-    padding-top: 20px;
-    max-width: 575px;
-  }
 </style>

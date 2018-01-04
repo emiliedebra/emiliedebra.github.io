@@ -1,20 +1,87 @@
 <!-- About Page -->
-
 <template>
-  <v-container flat class="page text-xs-center">
-    <h1>About Me Yay</h1>
+  <v-container text-xs-center class="about-container">
+    <v-layout pb-3 row>
+      <v-flex xs6>
+        <info-text v-for="item in basic" :key="item.title" :title="item.title" :content="item.content"></info-text>
+      </v-flex>
+      <v-flex xs5>
+        <v-avatar size="200px">
+          <img src="../assets/cv-image.gif">
+        </v-avatar>
+      </v-flex>
+      <v-flex xs6>
+        <info-text v-for="item in additional" :key="item.title" :title="item.title" :content="item.content"></info-text>
+      </v-flex>
+    </v-layout>
+    <v-divider></v-divider>
+    <v-card flat class="transparent">
+      <v-card-text>{{ bio.content }}</v-card-text>
+    </v-card>
   </v-container>
 </template>
 
 <script>
+import InfoText from '../components/InfoText.vue';
 
 export default {
   name: 'about',
+  data() {
+    return {
+      basic: [
+        {
+          title: 'Full Name',
+          content: 'Emilie Debra Wood',
+        },
+        {
+          title: 'Date of Birth',
+          content: '13th January 1997',
+        },
+        {
+          title: 'Citizenship',
+          content: 'British | South African',
+        },
+        {
+          title: 'Availability',
+          content: '19th February 2018',
+        },
+      ],
+      additional: [
+        {
+          title: 'Language',
+          content: 'English',
+        },
+        {
+          title: 'LinkedIn Profile',
+          content: 'linkedin.com/in/emilie-wood/',
+        },
+        {
+          title: 'GitHub Profile',
+          content: 'github.com/emiliedebra',
+        },
+      ],
+      bio: {
+        title: 'Bio',
+        content: `I am a recent UCT BSc Computer Science and Computer Engineering graduate.
+        I have a passion for problem solving with a determined and positive attitude towards
+        solving life's continuous complex problems. This gets applied well in the software development industry,
+        in which I have several years of student vacation work experience developing business applications,
+        both back end and front end. Whilst software engineering utilises my practical and technical side,
+        I am a music and dance enthusiast and am able to approach design problems from an artistic and creative perspective as well.
+        My problem-solving ability is applied throughout all aspects of my life, and I am continuously seeking to gain knowledge.
+        When not gaining this knowledge in a software environment, I am an advocate for self-improvement,
+        and am continuously striving for increased physical and mental health.`,
+      },
+    };
+  },
+
+  components: {
+    InfoText,
+  },
 };
 </script>
 <style>
-.container {
+.about-container {
   padding: 0;
-  padding-top: 20px;
 }
 </style>

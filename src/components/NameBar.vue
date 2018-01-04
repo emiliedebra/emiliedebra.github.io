@@ -1,8 +1,10 @@
 <template>
-  <v-container class="name text-xs-center">
-    <h1>{{ name }}</h1>
-    <v-divider></v-divider>
-  </v-container>
+  <transition name="fade">
+    <v-container class="text-xs-center">
+      <h1>{{ name }}</h1>
+      <v-divider></v-divider>
+    </v-container>
+  </transition>
 </template>
 
 <script>
@@ -17,8 +19,11 @@ export default {
 </script>
 
 <style>
-h1 {
-  font-weight: 100;
-  font-size: 70px;
-}
+ .fade-enter-active {
+    transition: opacity .5s
+  }
+
+  .fade-enter /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0
+  }
 </style>

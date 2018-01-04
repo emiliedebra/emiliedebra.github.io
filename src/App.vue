@@ -1,9 +1,9 @@
 <template>
   <v-app>
-    <v-container fill-height>
+    <v-container :fill-height="!enter" class="title-container">
       <v-flex column>
-        <transition name='fade'>
-          <name-bar></name-bar>
+        <transition name="fade">
+          <name-bar ref="name"></name-bar>
         </transition>
         <title-bar v-if="enter" @changePage="change"></title-bar>
         <enter-bar v-if="!enter" @enter="enterCV"></enter-bar>
@@ -34,6 +34,7 @@ export default {
     enterCV() {
       this.enter = true;
       // do name-bar transition
+      this.$refs.name.style.color = 'red';
     },
     change(prop) {
       switch (prop) {
@@ -67,17 +68,29 @@ export default {
 body {
   margin: 0;
 }
-.fade-enter-active {
-  transition: opacity .5s
-}
-
-.fade-enter /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0
-}
 
 #app {
   font-family: 'Roboto', sans-serif;
   color: #2c3e50;
-  background-color: #f9fbe7;
+  background-color: #fafafa;
+  /* background-color: #f9fbe7; */
+}
+.title-container {
+    padding: 0;
+    padding-top: 20px;
+    max-width: 650px;
+    max-height: 230px;
+}
+
+.transparent-background {
+  background-color: none;
+}
+h1 {
+  font-weight: 100;
+  font-size: 70px;
+}
+h3 {
+  font-weight: 200;
+  /* font-size: 70px; */
 }
 </style>
