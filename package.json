@@ -4,7 +4,9 @@
   "description": "Digital CV of Emilie Debra Wood",
   "author": "Emilie Wood <emilie@anotherway.co.za>",
   "private": true,
+  "homepage": "https://github.com/emiliedebra/emiliedebra.github.io",
   "scripts": {
+    "deploy": "node ./node_modules/vue-gh-pages/index.js",
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
@@ -13,6 +15,7 @@
   },
   "dependencies": {
     "vue": "^2.5.2",
+    "vue-gh-pages": "^1.7.3",
     "vue-router": "^3.0.1",
     "vuetify": "^0.17.6"
   },
