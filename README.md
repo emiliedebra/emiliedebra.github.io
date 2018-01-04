@@ -1,4 +1,4 @@
-# emiliedebrawood.github.io
+# emiliedebra.github.io
 
 > Digital CV of Emilie Debra Wood
 
