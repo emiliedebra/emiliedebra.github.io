@@ -4,7 +4,8 @@
       <v-flex row>
         <v-btn-toggle v-model="selected">
           <v-btn flat>About Me</v-btn>
-          <v-btn flat>Skills and Experience</v-btn>
+          <v-btn flat>Skills</v-btn>
+          <v-btn flat>Experience</v-btn>
           <v-btn flat>Education</v-btn>
           <v-btn flat>Contact Me</v-btn>
         </v-btn-toggle>

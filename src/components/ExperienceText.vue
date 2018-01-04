@@ -1,12 +1,13 @@
 <template>
-  <v-container pa-0 pt-2>
+  <v-container class="width-limit-600 text-xs-left" pa-0 pt-2 pb-2>
     <v-layout column>
       <v-flex>
-        <h3>{{ header }}</h3>
+        <v-layout row>
+          <h3>{{ header }}</h3>
+        </v-layout>
       </v-flex>
       <v-flex text-align-left>
         <ul>{{ content.description }}</ul>
-        <ul>{{ content.additional }}</ul>
       </v-flex>
     </v-layout>
   </v-container>
@@ -16,9 +17,14 @@
 export default {
   name: 'education-text',
   props: ['content'],
+  data() {
+    return {
+      divider: ' | ',
+    };
+  },
   computed: {
     header() {
-      return `${this.content.institution} | ${this.content.year}`;
+      return `${this.content.title} | ${this.content.company} | ${this.content.date}`;
     },
   },
 };

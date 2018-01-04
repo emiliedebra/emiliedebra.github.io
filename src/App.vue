@@ -45,9 +45,12 @@ export default {
           this.pageButton = 'skills';
           break;
         case 2:
-          this.pageButton = 'education';
+          this.pageButton = 'experience';
           break;
         case 3:
+          this.pageButton = 'education';
+          break;
+        case 4:
           this.pageButton = 'contact';
           break;
         default:
@@ -81,8 +84,13 @@ body {
     max-width: 650px;
     max-height: 230px;
 }
+
 .width-limit-400 {
   max-width: 500px;
+}
+
+.width-limit-600 {
+  max-width: 600px;
 }
 
 .transparent-background {
@@ -93,6 +101,10 @@ h1 {
   font-size: 70px;
 }
 h3 {
+  font-weight: 200;
+  /* font-size: 70px; */
+}
+h2 {
   font-weight: 200;
   /* font-size: 70px; */
 }
