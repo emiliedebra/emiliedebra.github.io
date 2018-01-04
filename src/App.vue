@@ -24,7 +24,7 @@ export default {
   name: 'app',
   data() {
     return {
-      enter: false,
+      enter: !false,
       pageButton: 'about',
     };
   },
@@ -42,10 +42,10 @@ export default {
           this.pageButton = 'about';
           break;
         case 1:
-          this.pageButton = 'education';
+          this.pageButton = 'skills';
           break;
         case 2:
-          this.pageButton = 'skills';
+          this.pageButton = 'education';
           break;
         case 3:
           this.pageButton = 'contact';
@@ -80,6 +80,9 @@ body {
     padding-top: 20px;
     max-width: 650px;
     max-height: 230px;
+}
+.width-limit-400 {
+  max-width: 500px;
 }
 
 .transparent-background {
