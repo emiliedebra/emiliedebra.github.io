@@ -2,7 +2,11 @@
 
 <template>
   <transition name="fade">
-    <v-container flat class="page text-xs-center">
+    <v-container flat class="width-limit-600 text-xs-left">
+      <h3>Projects</h3>
+      <experience-text v-for="item in projects" :key="item.company" :content="item"></experience-text>
+      <v-divider></v-divider>
+      <h3>Work Experience</h3>
       <experience-text v-for="item in experiences" :key="item.company" :content="item"></experience-text>
     </v-container>
   </transition>
@@ -15,6 +19,22 @@ export default {
   name: 'experience',
   data() {
     return {
+      projects: [
+        {
+          title: 'UCT Capstone Project (Final Year Project)',
+          company: 'AnotherwayTech',
+          date: 'December 2017 - Present',
+          description: `Involvement in the back-end development of a CryptoCurrency trading system using Javascript/ES6/7,
+           Node.js and Flow. Currently tasked with writing exchange API’s.`,
+        },
+        {
+          title: 'UCT Embedded Systems 3rd Year Project',
+          company: 'Get Smart Tutors (Cape Town) ',
+          date: 'January 2017 - November 2017',
+          description: `Private Tutor for a 1st Year Electrical and Computer Engineering Student at the University of Cape Town
+          (focus on Computer Science and Electrical Engineering Basics)`,
+        },
+      ],
       experiences: [
         {
           title: 'Vac Work',

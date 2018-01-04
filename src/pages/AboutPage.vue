@@ -1,12 +1,12 @@
 <!-- About Page -->
 <template>
   <transition name="fade">
-    <v-container text-xs-center class="about-container">
+    <v-container text-xs-center class="width-limit-800 about-container">
       <v-layout pb-3 row>
         <v-flex xs6>
           <info-text v-for="item in basic" :key="item.title" :title="item.title" :content="item.content"></info-text>
         </v-flex>
-        <v-flex xs5>
+        <v-flex xs6>
           <v-avatar size="200px">
             <img src="../../static/img/icons/cv-image.gif">
           </v-avatar>
@@ -98,6 +98,7 @@ export default {
 .fade-enter /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
 .about-container {
   padding: 0;
 }

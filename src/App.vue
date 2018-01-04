@@ -92,6 +92,9 @@ body {
 .width-limit-600 {
   max-width: 600px;
 }
+.width-limit-800 {
+  max-width: 800px;
+}
 
 .transparent-background {
   background-color: none;
