@@ -7,7 +7,7 @@
       </v-flex>
       <v-flex xs5>
         <v-avatar size="200px">
-          <img src="../assets/cv-image.gif">
+          <img src="../../static/img/icons/cv-image.gif">
         </v-avatar>
       </v-flex>
       <v-flex xs6>
