@@ -6,7 +6,6 @@
         <v-btn flat>Skills</v-btn>
         <v-btn flat>Experience</v-btn>
         <v-btn flat>Education</v-btn>
-        <v-btn flat>Contact Me</v-btn>
       </v-btn-toggle>
     </v-flex>
   </v-container>

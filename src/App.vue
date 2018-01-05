@@ -49,9 +49,6 @@ export default {
         case 3:
           this.pageButton = 'education';
           break;
-        case 4:
-          this.pageButton = 'contact';
-          break;
         default:
           this.pageButton = null;
       }

@@ -7,7 +7,6 @@
       <education-page v-if="pressed==='education'"></education-page>
       <skills-page v-if="pressed==='skills'"></skills-page>
       <experience-page v-if="pressed==='experience'"></experience-page>
-      <contact-page v-if="pressed==='contact'"></contact-page>
     </transition>
   </v-container>
 </template>
@@ -17,7 +16,6 @@ import AboutPage from './AboutPage.vue';
 import EducationPage from './EducationPage.vue';
 import SkillsPage from './SkillsPage.vue';
 import ExperiencePage from './ExperiencePage.vue';
-import ContactPage from './ContactPage.vue';
 
 export default {
   name: 'home',
@@ -27,7 +25,6 @@ export default {
     EducationPage,
     SkillsPage,
     ExperiencePage,
-    ContactPage,
   },
 };
 </script>

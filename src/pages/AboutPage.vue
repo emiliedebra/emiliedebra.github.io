@@ -20,6 +20,12 @@
     <v-card flat class="transparent">
       <v-card-text>{{ bio.content }}</v-card-text>
     </v-card>
+    <v-btn icon flat :href="this.github" pa-0 ma-0>
+        <img src="../assets/GitHub-Mark-32px.png" size="16px">
+    </v-btn>
+    <v-btn icon flat :href="this.linkedin" pa-0 ma-0>
+      <img src="../assets/In-Black-34px-TM.png" size="16px">
+    </v-btn>
   </v-container>
 </template>
 
@@ -30,6 +36,8 @@ export default {
   name: 'about',
   data() {
     return {
+      github: 'https://github.com/emiliedebra',
+      linkedin: 'https://www.linkedin.com/in/emilie-wood/',
       basic: [
         {
           title: 'Full Name',
@@ -40,26 +48,26 @@ export default {
           content: '13th January 1997',
         },
         {
+          title: 'Place of Birth',
+          content: 'Cambridge, United Kingdom',
+        },
+      ],
+      additional: [
+        {
+          title: 'Email',
+          content: 'emilie@anotherway.co.za',
+        },
+        {
+          title: 'Language',
+          content: 'English',
+        },
+        {
           title: 'Citizenship',
           content: 'British | South African',
         },
         {
           title: 'Availability',
           content: '19th February 2018',
-        },
-      ],
-      additional: [
-        {
-          title: 'Language',
-          content: 'English',
-        },
-        {
-          title: 'LinkedIn Profile',
-          content: 'linkedin.com/in/emilie-wood/',
-        },
-        {
-          title: 'GitHub Profile',
-          content: 'github.com/emiliedebra',
         },
       ],
       bio: {
