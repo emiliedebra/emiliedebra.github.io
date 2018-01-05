@@ -14,7 +14,9 @@
         <info-text v-for="item in additional" :key="item.title" :title="item.title" :content="item.content"></info-text>
       </v-flex>
     </v-layout>
-    <v-divider></v-divider>
+    <v-container class="divider-container" pa-0 pt-3 pb-3>
+      <v-divider></v-divider>
+    </v-container>
     <v-card flat class="transparent">
       <v-card-text>{{ bio.content }}</v-card-text>
     </v-card>

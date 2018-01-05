@@ -2,9 +2,8 @@
   <v-app>
     <v-container :fill-height="!enter" class="title-container">
       <v-flex column>
-        <transition name="fade">
-          <name-bar ref="name"></name-bar>
-        </transition>
+        <name-bar key="name-center" v-if="!enter"></name-bar>
+        <name-bar key="name-top" v-if="enter"></name-bar>
         <title-bar v-if="enter" @changePage="change"></title-bar>
         <enter-bar v-if="!enter" @enter="enterCV"></enter-bar>
         <!-- <router-view></router-view> -->
@@ -24,7 +23,7 @@ export default {
   name: 'app',
   data() {
     return {
-      enter: !false,
+      enter: false,
       pageButton: 'about',
     };
   },
@@ -84,8 +83,13 @@ body {
     max-width: 650px;
     max-height: 230px;
 }
-
-.width-limit-400 {
+.divider-container {
+  max-width: 500px;
+  padding: 0;
+  padding-bottom: 3;
+  padding-top: 3;
+}
+.width-limit-500 {
   max-width: 500px;
 }
 
@@ -99,6 +103,19 @@ body {
 .transparent-background {
   background-color: none;
 }
+
+.fade-enter-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0
+}
+
+.fade-enter-to, .fade-leave {
+  opacity: 1;
+}
+
 h1 {
   font-weight: 100;
   font-size: 70px;

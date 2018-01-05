@@ -37,8 +37,12 @@ export default {
   padding: 0;
 }
 
-.fade-enter-active,  {
+.fade-enter-active {
   transition: opacity 0.5s;
+}
+
+.fade-leave-active  {
+  transition: opacity 0.1s;
 }
 
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {

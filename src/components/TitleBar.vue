@@ -1,17 +1,15 @@
 <template>
-  <transition name="fade">
-    <v-container flat class="title text-xs-center">
-      <v-flex row>
-        <v-btn-toggle v-model="selected">
-          <v-btn flat>About Me</v-btn>
-          <v-btn flat>Skills</v-btn>
-          <v-btn flat>Experience</v-btn>
-          <v-btn flat>Education</v-btn>
-          <v-btn flat>Contact Me</v-btn>
-        </v-btn-toggle>
-      </v-flex>
-    </v-container>
-  </transition>
+  <v-container flat class="title text-xs-center">
+    <v-flex row>
+      <v-btn-toggle v-model="selected">
+        <v-btn flat>About Me</v-btn>
+        <v-btn flat>Skills</v-btn>
+        <v-btn flat>Experience</v-btn>
+        <v-btn flat>Education</v-btn>
+        <v-btn flat>Contact Me</v-btn>
+      </v-btn-toggle>
+    </v-flex>
+  </v-container>
 </template>
 
 <script>
@@ -31,13 +29,6 @@ export default {
 </script>
 
 <style>
-  .fade-enter-active {
-    transition: opacity .5s
-  }
-
-  .fade-enter /* .fade-leave-active below version 2.1.8 */ {
-    opacity: 0
-  }
   .theme--light .btn-toggle {
     background: none;
   }

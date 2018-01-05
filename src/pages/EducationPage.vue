@@ -2,14 +2,14 @@
 
 <template>
   <v-container flat class="page text-xs-center">
-    <v-container class="width-limit-400 text-xs-left" pa-0>
+    <v-container class="width-limit-500 text-xs-left" pa-0>
       <h3>Tertiary Education</h3>
       <education-text v-for="item in tertiary" :key="item.title" :content="item"></education-text>
     </v-container>
-    <v-container class="width-limit-400" pa-0 pt-3 pb-3>
+    <v-container class="divider-container" pa-0 pt-3 pb-3>
       <v-divider></v-divider>
     </v-container>
-    <v-container class="width-limit-400 text-xs-left" pa-0>
+    <v-container class="width-limit-500 text-xs-left" pa-0>
       <h3>Secondary Education</h3>
       <education-text v-for="item in secondary" :key="item.title" :content="item"></education-text>
     </v-container>
