@@ -1,21 +1,19 @@
 <!-- Education Page -->
 
 <template>
-  <transition name="fade">
-    <v-container flat class="page text-xs-center">
-      <v-container class="width-limit-400 text-xs-left" pa-0>
-        <h3>Tertiary Education</h3>
-        <education-text v-for="item in tertiary" :key="item.title" :content="item"></education-text>
-      </v-container>
-      <v-container class="width-limit-400" pa-0 pt-3 pb-3>
-        <v-divider></v-divider>
-      </v-container>
-      <v-container class="width-limit-400 text-xs-left" pa-0>
-        <h3>Secondary Education</h3>
-        <education-text v-for="item in secondary" :key="item.title" :content="item"></education-text>
-      </v-container>
+  <v-container flat class="page text-xs-center">
+    <v-container class="width-limit-400 text-xs-left" pa-0>
+      <h3>Tertiary Education</h3>
+      <education-text v-for="item in tertiary" :key="item.title" :content="item"></education-text>
     </v-container>
-  </transition>
+    <v-container class="width-limit-400" pa-0 pt-3 pb-3>
+      <v-divider></v-divider>
+    </v-container>
+    <v-container class="width-limit-400 text-xs-left" pa-0>
+      <h3>Secondary Education</h3>
+      <education-text v-for="item in secondary" :key="item.title" :content="item"></education-text>
+    </v-container>
+  </v-container>
 </template>
 
 <script>
@@ -55,18 +53,4 @@ export default {
 };
 </script>
 <style>
-.fade-enter-active {
-  transition: opacity .3s
-}
-
-.fade-enter /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0
-}
-.fade-leave-active {
-  transition: opacity .0s;
-}
-
-.fade-leave {
-  opacity: 0;
-}
 </style>

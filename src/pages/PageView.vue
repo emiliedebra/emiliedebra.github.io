@@ -2,11 +2,13 @@
 
 <template>
   <v-container flat grid class="page">
-    <about-page v-if="pressed==='about'"></about-page>
-    <education-page v-if="pressed==='education'"></education-page>
-    <skills-page v-if="pressed==='skills'"></skills-page>
-    <experience-page v-if="pressed==='experience'"></experience-page>
-    <contact-page v-if="pressed==='contact'"></contact-page>
+    <transition name="fade" mode="out-in">
+      <about-page v-if="pressed==='about'"></about-page>
+      <education-page v-if="pressed==='education'"></education-page>
+      <skills-page v-if="pressed==='skills'"></skills-page>
+      <experience-page v-if="pressed==='experience'"></experience-page>
+      <contact-page v-if="pressed==='contact'"></contact-page>
+    </transition>
   </v-container>
 </template>
 
@@ -33,5 +35,17 @@ export default {
 <style>
 .page {
   padding: 0;
+}
+
+.fade-enter-active,  {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0
+}
+
+.fade-enter-to, .fade-leave {
+  opacity: 1;
 }
 </style>

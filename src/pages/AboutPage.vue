@@ -1,26 +1,24 @@
 <!-- About Page -->
 <template>
-  <transition name="fade">
-    <v-container text-xs-center class="width-limit-800 about-container">
-      <v-layout pb-3 row>
-        <v-flex xs6>
-          <info-text v-for="item in basic" :key="item.title" :title="item.title" :content="item.content"></info-text>
-        </v-flex>
-        <v-flex xs6>
-          <v-avatar size="200px">
-            <img src="../../static/img/icons/cv-image.gif">
-          </v-avatar>
-        </v-flex>
-        <v-flex xs6>
-          <info-text v-for="item in additional" :key="item.title" :title="item.title" :content="item.content"></info-text>
-        </v-flex>
-      </v-layout>
-      <v-divider></v-divider>
-      <v-card flat class="transparent">
-        <v-card-text>{{ bio.content }}</v-card-text>
-      </v-card>
-    </v-container>
-  </transition>
+  <v-container text-xs-center class="width-limit-800 about-container">
+    <v-layout pb-3 row>
+      <v-flex xs6>
+        <info-text v-for="item in basic" :key="item.title" :title="item.title" :content="item.content"></info-text>
+      </v-flex>
+      <v-flex xs6>
+        <v-avatar size="200px">
+          <img src="../../static/img/icons/cv-image.gif">
+        </v-avatar>
+      </v-flex>
+      <v-flex xs6>
+        <info-text v-for="item in additional" :key="item.title" :title="item.title" :content="item.content"></info-text>
+      </v-flex>
+    </v-layout>
+    <v-divider></v-divider>
+    <v-card flat class="transparent">
+      <v-card-text>{{ bio.content }}</v-card-text>
+    </v-card>
+  </v-container>
 </template>
 
 <script>
@@ -83,22 +81,6 @@ export default {
 };
 </script>
 <style>
-.fade-enter-active {
-  transition: opacity .3s;
-}
-
-.fade-leave-active {
-  transition: opacity .0s;
-}
-
-.fade-leave {
-  opacity: 0;
-}
-
-.fade-enter /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-
 .about-container {
   padding: 0;
 }

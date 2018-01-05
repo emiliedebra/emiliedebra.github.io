@@ -1,19 +1,18 @@
 <!-- Experience Page -->
 
 <template>
-  <transition name="fade">
-    <v-container flat class="width-limit-600 text-xs-left">
-      <h3>Projects</h3>
-      <experience-text v-for="item in projects" :key="item.company" :content="item"></experience-text>
-      <v-divider></v-divider>
-      <h3>Work Experience</h3>
-      <experience-text v-for="item in experiences" :key="item.company" :content="item"></experience-text>
-    </v-container>
-  </transition>
+  <v-container flat class="width-limit-600 text-xs-left">
+    <h3>Projects</h3>
+    <project-text v-for="item in projects" :key="item.company" :content="item"></project-text>
+    <v-divider></v-divider>
+    <h3>Work Experience</h3>
+    <experience-text v-for="item in experiences" :key="item.company" :content="item"></experience-text>
+  </v-container>
 </template>
 
 <script>
 import ExperienceText from '../components/ExperienceText.vue';
+import ProjectText from '../components/ProjectText.vue';
 
 export default {
   name: 'experience',
@@ -21,16 +20,17 @@ export default {
     return {
       projects: [
         {
-          title: 'UCT Capstone Project (Final Year Project)',
-          company: 'AnotherwayTech',
-          date: 'December 2017 - Present',
+          title: 'Research Paper Management Web Application',
+          institution: 'UCT Capstone Project (Final Year Project)',
+          link: 'https://github.com/emiliedebra/capstone-demo-front-end',
           description: `Involvement in the back-end development of a CryptoCurrency trading system using Javascript/ES6/7,
            Node.js and Flow. Currently tasked with writing exchange API’s.`,
         },
         {
-          title: 'UCT Embedded Systems 3rd Year Project',
-          company: 'Get Smart Tutors (Cape Town) ',
+          title: 'Physical Step Sequencer',
+          institution: 'UCT Embedded Systems (3rd Year Project)',
           date: 'January 2017 - November 2017',
+          link: 'https://github.com/emiliedebra/embedded-project',
           description: `Private Tutor for a 1st Year Electrical and Computer Engineering Student at the University of Cape Town
           (focus on Computer Science and Electrical Engineering Basics)`,
         },
@@ -70,23 +70,9 @@ export default {
   },
   components: {
     ExperienceText,
+    ProjectText,
   },
 };
 </script>
 <style>
-.fade-enter-active {
-  transition: opacity .3s
-}
-
-.fade-enter /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0
-}
-
-.fade-leave-active {
-  transition: opacity .0s;
-}
-
-.fade-leave {
-  opacity: 0;
-}
 </style>
