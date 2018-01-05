@@ -2,7 +2,12 @@
 <template>
   <v-container text-xs-center class="width-limit-800 about-container">
     <v-container text-xs-center>
-      <v-layout pb-3 :row="screenSize" :column="!screenSize" v-resize="onSmallScreen" ref="resizableCol">
+      <v-layout pb-3 :row="screenSize" :column="!screenSize" v-resize="onSmallScreen" justify-content-center>
+        <v-flex pb-2 v-if="!screenSize">
+          <v-avatar size="100px">
+            <img src="../../static/img/icons/cv-image.gif">
+          </v-avatar>
+        </v-flex>
         <v-flex>
           <info-text v-for="item in basic" :key="item.title" :title="item.title" :content="item.content"></info-text>
         </v-flex>
@@ -89,7 +94,7 @@ export default {
   },
   methods: {
     onSmallScreen() {
-      if (window.innerWidth < 1000) {
+      if (window.innerWidth < 1000) { // change to State
         this.screenSize = false;
       } else {
         this.screenSize = true;

@@ -12,7 +12,7 @@
           <ul>{{ content.description }}</ul>
           <ul>{{ content.link}}</ul>
         </v-flex>
-        <v-btn icon flat :href="this.content.link" pa-0 ma-0>
+        <v-btn icon flat :href="this.content.link" pa-1 ma-0>
           <img src="../assets/GitHub-Mark-32px.png" size="16px">
         </v-btn>
       </v-layout>

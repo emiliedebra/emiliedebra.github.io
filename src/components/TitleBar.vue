@@ -1,6 +1,16 @@
 <template>
-  <v-container flat class="title text-xs-center">
-    <v-flex :row="screenSize" :column="!screenSize">
+  <v-container flat class="title" text-xs-center v-resize="onSmallScreen">
+    <v-menu offset-y v-if="screenSize">
+      <v-btn slot="activator" icon>
+        <v-icon>menu</v-icon>
+      </v-btn>
+      <v-list>
+        <v-list-tile v-for="item in menuItems" :key="item.title" @click="selected=item.number">
+          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+        </v-list-tile>
+      </v-list>
+    </v-menu>
+    <v-flex v-if="!screenSize">
       <v-btn-toggle v-model="selected">
         <v-btn flat>About Me</v-btn>
         <v-btn flat>Skills</v-btn>
@@ -18,6 +28,24 @@ export default {
     return {
       screenSize: true,
       selected: 0,
+      menuItems: [
+        {
+          title: 'About Me',
+          number: 0,
+        },
+        {
+          title: 'Skills',
+          number: 1,
+        },
+        {
+          title: 'Experience',
+          number: 2,
+        },
+        {
+          title: 'Education',
+          number: 3,
+        },
+      ],
     };
   },
   watch: {
@@ -27,7 +55,7 @@ export default {
   },
   methods: {
     onSmallScreen() {
-      if (window.innerWidth < 1000) {
+      if (window.innerWidth > 1000) {
         this.screenSize = false;
       } else {
         this.screenSize = true;

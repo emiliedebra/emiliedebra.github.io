@@ -56,7 +56,7 @@ export default {
     },
     onResize() {
       if (this.$refs.app.clientWidth < 600) {
-        this.textSize = '45px';
+        this.textSize = '30px';
       } else {
         this.textSize = '70px';
       }
@@ -80,6 +80,8 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #2c3e50;
   background-color: #fafafa;
+  min-width: 200px;
+  /* min-height: 400px; */
   /* background-color: #f9fbe7; */
 }
 
