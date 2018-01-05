@@ -8,6 +8,7 @@
         <ul>{{ content.description }}</ul>
         <ul>{{ content.additional }}</ul>
       </v-flex>
+      <!-- <img src="logoLink" width="70px" height="70px"> -->
     </v-layout>
   </v-container>
 </template>
@@ -19,6 +20,9 @@ export default {
   computed: {
     header() {
       return `${this.content.institution} | ${this.content.year}`;
+    },
+    logoLink() {
+      return `../assets/${this.content.logo}`;
     },
   },
 };

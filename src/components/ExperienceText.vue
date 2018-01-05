@@ -9,6 +9,9 @@
       <v-flex text-align-left>
         <ul>{{ content.description }}</ul>
       </v-flex>
+      <v-flex row>
+        <v-chip :key="item" v-for="item in content.techUsed">{{ item }}</v-chip>
+      </v-flex>
     </v-layout>
   </v-container>
 </template>

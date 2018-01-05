@@ -7,15 +7,18 @@
         </v-layout>
       </v-flex>
       <v-layout row>
-        <v-flex text-align-left>
+        <v-flex text-align-left pr-1>
           <ul>{{ content.institution }}</ul>
           <ul>{{ content.description }}</ul>
           <ul>{{ content.link}}</ul>
         </v-flex>
-        <v-btn icon flat :href="this.content.link" pa-1 ma-0>
+        <v-btn icon flat :href="this.content.link">
           <img src="../assets/GitHub-Mark-32px.png" size="16px">
         </v-btn>
       </v-layout>
+      <v-flex row>
+        <v-chip :key="item" v-for="item in content.techUsed">{{ item }}</v-chip>
+      </v-flex>
     </v-layout>
   </v-container>
 </template>

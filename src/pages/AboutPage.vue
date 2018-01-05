@@ -1,24 +1,23 @@
 <!-- About Page -->
 <template>
   <v-container text-xs-center class="width-limit-800 about-container">
-    <v-container text-xs-center>
-      <v-layout pb-3 :row="screenSize" :column="!screenSize" v-resize="onSmallScreen" justify-content-center>
-        <v-flex pb-2 v-if="!screenSize">
-          <v-avatar size="100px">
-            <img src="../../static/img/icons/cv-image.gif">
-          </v-avatar>
-        </v-flex>
+    <v-container text-xs-center fill-height>
+      <v-layout pb-2 pt-3 :row="screenSize" :column="!screenSize" v-resize="onSmallScreen">
         <v-flex>
-          <info-text v-for="item in basic" :key="item.title" :title="item.title" :content="item.content"></info-text>
-        </v-flex>
-        <v-flex v-if="screenSize">
           <v-avatar size="200px">
             <img src="../../static/img/icons/cv-image.gif">
           </v-avatar>
         </v-flex>
-        <v-flex>
-          <info-text v-for="item in additional" :key="item.title" :title="item.title" :content="item.content"></info-text>
-        </v-flex>
+        <v-container fill-height>
+          <v-layout :row="screenSize" :column="!screenSize">
+            <v-flex>
+              <info-text v-for="item in basic" :key="item.title" :title="item.title" :content="item.content"></info-text>
+            </v-flex>
+            <v-flex>
+              <info-text v-for="item in additional" :key="item.title" :title="item.title" :content="item.content"></info-text>
+            </v-flex>
+          </v-layout>
+        </v-container>
       </v-layout>
     </v-container>
     <v-container class="divider-container" pa-0 pt-3 pb-3>
@@ -66,12 +65,8 @@ export default {
           content: 'emilie@anotherway.co.za',
         },
         {
-          title: 'Language',
-          content: 'English',
-        },
-        {
           title: 'Citizenship',
-          content: 'British | South African',
+          content: 'British',
         },
         {
           title: 'Availability',

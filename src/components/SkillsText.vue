@@ -1,5 +1,5 @@
 <template>
-  <v-container class="width-limit-500 text-xs-left" pt-2>
+  <v-container class="width-limit-600 text-xs-left" pt-2>
     <v-layout column>
       <v-flex>
         <h3>{{ title }}</h3>

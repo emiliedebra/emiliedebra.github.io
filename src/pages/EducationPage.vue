@@ -29,12 +29,15 @@ export default {
           year: 'July 2017 - November 2017',
           description: 'BSc in Computer Science and Computer Engineering',
           additional: 'Awarded Cum Laude graduation',
+          logo: 'logo',
         },
         {
           institution: 'University of Cape Town',
           year: '2015 – July 2017',
           description: 'BSc Eng in Electrical and Computer Engineering',
           additional: 'Dean\'s Merit List Student for 2015, 2016 and 2017',
+          logo: 'Port_Shepstone_High_School.gif',
+
         },
       ],
       secondary: [

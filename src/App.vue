@@ -1,7 +1,7 @@
 <template>
   <v-app v-resize="onResize" ref="app">
     <transition name="slide-up">
-      <v-container :fill-height="!enter" class="title-container">
+      <v-container :fill-height="!enter" pt-0 class="title-container">
         <v-flex column>
           <name-bar :text="textSize" key="name-center"></name-bar>
           <title-bar v-if="enter" @changePage="change"></title-bar>

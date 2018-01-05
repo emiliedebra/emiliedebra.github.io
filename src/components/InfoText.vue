@@ -5,7 +5,7 @@
         <h3>{{ title }}</h3>
       </v-flex>
       <v-flex xs6 text-xs-left>
-        <p>{{ content }}</p>
+        <p pa-0 ma-0>{{ content }}</p>
       </v-flex>
     </v-layout>
   </v-container>
