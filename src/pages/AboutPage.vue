@@ -1,19 +1,21 @@
 <!-- About Page -->
 <template>
   <v-container text-xs-center class="width-limit-800 about-container">
-    <v-layout pb-3 row>
-      <v-flex xs6>
-        <info-text v-for="item in basic" :key="item.title" :title="item.title" :content="item.content"></info-text>
-      </v-flex>
-      <v-flex xs6>
-        <v-avatar size="200px">
-          <img src="../../static/img/icons/cv-image.gif">
-        </v-avatar>
-      </v-flex>
-      <v-flex xs6>
-        <info-text v-for="item in additional" :key="item.title" :title="item.title" :content="item.content"></info-text>
-      </v-flex>
-    </v-layout>
+    <v-container text-xs-center>
+      <v-layout pb-3 :row="screenSize" :column="!screenSize" v-resize="onSmallScreen" ref="resizableCol">
+        <v-flex>
+          <info-text v-for="item in basic" :key="item.title" :title="item.title" :content="item.content"></info-text>
+        </v-flex>
+        <v-flex v-if="screenSize">
+          <v-avatar size="200px">
+            <img src="../../static/img/icons/cv-image.gif">
+          </v-avatar>
+        </v-flex>
+        <v-flex>
+          <info-text v-for="item in additional" :key="item.title" :title="item.title" :content="item.content"></info-text>
+        </v-flex>
+      </v-layout>
+    </v-container>
     <v-container class="divider-container" pa-0 pt-3 pb-3>
       <v-divider></v-divider>
     </v-container>
@@ -36,6 +38,7 @@ export default {
   name: 'about',
   data() {
     return {
+      screenSize: true,
       github: 'https://github.com/emiliedebra',
       linkedin: 'https://www.linkedin.com/in/emilie-wood/',
       basic: [
@@ -84,7 +87,15 @@ export default {
       },
     };
   },
-
+  methods: {
+    onSmallScreen() {
+      if (window.innerWidth < 1000) {
+        this.screenSize = false;
+      } else {
+        this.screenSize = true;
+      }
+    },
+  },
   components: {
     InfoText,
   },

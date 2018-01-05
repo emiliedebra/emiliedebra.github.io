@@ -1,14 +1,14 @@
 <template>
-  <v-app>
-    <v-container :fill-height="!enter" class="title-container">
-      <v-flex column>
-        <name-bar key="name-center" v-if="!enter"></name-bar>
-        <name-bar key="name-top" v-if="enter"></name-bar>
-        <title-bar v-if="enter" @changePage="change"></title-bar>
-        <enter-bar v-if="!enter" @enter="enterCV"></enter-bar>
-        <!-- <router-view></router-view> -->
-      </v-flex>
-    </v-container>
+  <v-app v-resize="onResize" ref="app">
+    <transition name="slide-up">
+      <v-container :fill-height="!enter" class="title-container">
+        <v-flex column>
+          <name-bar :text="textSize" key="name-center"></name-bar>
+          <title-bar v-if="enter" @changePage="change"></title-bar>
+          <enter-bar v-if="!enter" @enter="enterCV"></enter-bar>
+        </v-flex>
+      </v-container>
+    </transition>
     <page-view v-if="enter" :pressed="pageButton"></page-view>
   </v-app>
 </template>
@@ -23,6 +23,8 @@ export default {
   name: 'app',
   data() {
     return {
+      screenSize: true,
+      textSize: '70px',
       enter: false,
       pageButton: 'about',
     };
@@ -33,7 +35,6 @@ export default {
     enterCV() {
       this.enter = true;
       // do name-bar transition
-      this.$refs.name.style.color = 'red';
     },
     change(prop) {
       switch (prop) {
@@ -51,6 +52,13 @@ export default {
           break;
         default:
           this.pageButton = null;
+      }
+    },
+    onResize() {
+      if (this.$refs.app.clientWidth < 600) {
+        this.textSize = '45px';
+      } else {
+        this.textSize = '70px';
       }
     },
   },
@@ -74,18 +82,21 @@ body {
   background-color: #fafafa;
   /* background-color: #f9fbe7; */
 }
+
 .title-container {
     padding: 0;
     padding-top: 20px;
     max-width: 650px;
     max-height: 230px;
 }
+
 .divider-container {
   max-width: 500px;
   padding: 0;
   padding-bottom: 3;
   padding-top: 3;
 }
+
 .width-limit-500 {
   max-width: 500px;
 }
@@ -93,6 +104,7 @@ body {
 .width-limit-600 {
   max-width: 600px;
 }
+
 .width-limit-800 {
   max-width: 800px;
 }
@@ -114,13 +126,15 @@ body {
 }
 
 h1 {
-  font-weight: 100;
+  font-weight: 200;
   font-size: 70px;
 }
+
 h3 {
   font-weight: 200;
   /* font-size: 70px; */
 }
+
 h2 {
   font-weight: 200;
   /* font-size: 70px; */
