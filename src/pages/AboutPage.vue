@@ -2,7 +2,7 @@
 <template>
   <v-container text-xs-center class="width-limit-800 about-container">
     <v-container text-xs-center fill-height>
-      <v-layout pb-2 pt-3 :row="screenSize" :column="!screenSize" v-resize="onSmallScreen">
+      <v-layout :row="screenSize" :column="!screenSize" v-resize="onSmallScreen">
         <v-flex>
           <v-avatar size="200px">
             <img src="../../static/img/icons/cv-image.gif">
@@ -103,6 +103,6 @@ export default {
 </script>
 <style>
 .about-container {
-  padding: 0;
+  /* padding: 0; */
 }
 </style>
