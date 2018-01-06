@@ -26,8 +26,8 @@ export default {
   name: 'title-bar',
   data() {
     return {
-      screenSize: true,
-      selected: 0,
+      screenSize: false,
+      selected: null,
       menuItems: [
         {
           title: 'About Me',

@@ -1,14 +1,17 @@
 <template>
   <v-app v-resize="onResize" ref="app">
-    <transition name="slide-up">
       <v-container :fill-height="!enter" pt-0 class="title-container">
         <v-flex column>
-          <name-bar :text="textSize" key="name-center"></name-bar>
-          <title-bar v-if="enter" @changePage="change"></title-bar>
+          <name-bar :text="textSize" key="name-center" v-if="!enter"></name-bar>
           <enter-bar v-if="!enter" @enter="enterCV"></enter-bar>
+          <transition name="slide-fade">
+            <name-bar :text="textSize" v-if="enter"></name-bar>
+          </transition>
+          <transition name="slide-fade">
+            <title-bar key="title" v-if="enter" @changePage="change"></title-bar>
+          </transition>
         </v-flex>
       </v-container>
-    </transition>
     <page-view v-if="enter" :pressed="pageButton"></page-view>
   </v-app>
 </template>
@@ -23,10 +26,10 @@ export default {
   name: 'app',
   data() {
     return {
-      screenSize: true,
+      screenSize: false,
       textSize: '70px',
       enter: false,
-      pageButton: 'about',
+      pageButton: '',
     };
   },
   computed: {
@@ -34,7 +37,6 @@ export default {
   methods: {
     enterCV() {
       this.enter = true;
-      // do name-bar transition
     },
     change(prop) {
       switch (prop) {
@@ -75,7 +77,19 @@ export default {
 body {
   margin: 0;
 }
-
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateY(150px);
+  opacity: 0;
+}
 #app {
   font-family: 'Roboto', sans-serif;
   color: #2c3e50;
@@ -109,6 +123,10 @@ body {
 
 .width-limit-800 {
   max-width: 800px;
+}
+
+.width-limit-1000 {
+  max-width: 1000px;
 }
 
 .transparent-background {

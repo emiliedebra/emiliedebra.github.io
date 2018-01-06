@@ -2,7 +2,7 @@
 
 <template>
   <v-container flat class="page text-xs-center">
-    <v-container>
+    <v-container class="width-limit-1000">
       <v-flex row>
         <v-chip outline :key="item" v-for="item in skills">{{ item }}</v-chip>
       </v-flex>
