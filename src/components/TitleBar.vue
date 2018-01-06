@@ -53,6 +53,11 @@ export default {
   },
   watch: {
     selected() {
+      if (this.selected !== null) {
+        this.menuName = this.menuItems[this.selected].title;
+      } else {
+        this.menuName = '';
+      }
       this.$emit('changePage', this.selected);
     },
   },
