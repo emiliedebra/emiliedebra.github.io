@@ -94,7 +94,7 @@ export default {
   },
   methods: {
     onSmallScreen() {
-      if (window.innerWidth < 900) { // change to State
+      if (this.$mq.below(900)) { // change to State
         this.screenSize = false;
       } else {
         this.screenSize = true;

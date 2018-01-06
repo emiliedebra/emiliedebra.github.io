@@ -67,7 +67,7 @@ export default {
       }
     },
     onResize() {
-      if (this.$refs.app.clientWidth < 600) {
+      if (this.$mq.below(600)) {
         this.textSize = '30px';
       } else {
         this.textSize = '70px';
@@ -103,7 +103,7 @@ body {
 #app {
   font-family: 'Roboto', sans-serif;
   color: #2c3e50;
-  background-color: #cfd8dc;
+  background-color: #eeeeee;
   /* background-color: #f7ffd8; */
   /* background-color: #f0ffe8; */
   /* background-color: #d7ccc8; */
