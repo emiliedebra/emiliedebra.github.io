@@ -30,10 +30,10 @@
     </v-card>
 
     <!-- Buttons  -->
-    <v-btn icon flat :href="this.github" pa-0 ma-0>
+    <v-btn icon flat :href="this.github" target="_blank" pa-0 ma-0>
         <img src="../assets/GitHub-Mark-32px.png" size="16px">
     </v-btn>
-    <v-btn icon flat :href="this.linkedin" pa-0 ma-0>
+    <v-btn icon flat :href="this.linkedin" target="_blank" pa-0 ma-0>
       <img src="../assets/In-Black-34px-TM.png" size="16px">
     </v-btn>
 

@@ -11,7 +11,7 @@
           <ul>{{ content.institution }}</ul>
           <ul>{{ content.description }}</ul>
         </v-flex>
-        <v-btn icon flat :href="this.content.link">
+        <v-btn icon flat :href="this.content.link" target="_blank">
           <img src="../assets/GitHub-Mark-32px.png" size="16px">
         </v-btn>
       </v-layout>
