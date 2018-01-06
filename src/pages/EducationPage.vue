@@ -1,7 +1,7 @@
 <!-- Education Page -->
 
 <template>
-  <v-container flat class="page text-xs-center">
+  <v-container flat pa-0 class="page text-xs-center">
     <v-container class="width-limit-500 text-xs-left" pa-0>
       <h3>Tertiary Education</h3>
       <education-text v-for="item in tertiary" :key="item.title" :content="item"></education-text>

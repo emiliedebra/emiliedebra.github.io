@@ -1,37 +1,42 @@
 <!-- About Page -->
 <template>
   <v-container text-xs-center class="width-limit-800 about-container">
-    <v-container text-xs-center fill-height>
-      <v-layout :row="screenSize" :column="!screenSize" v-resize="onSmallScreen">
-        <v-flex>
-          <v-avatar size="200px">
-            <img src="../../static/img/icons/cv-image.gif">
-          </v-avatar>
-        </v-flex>
-        <v-container fill-height>
-          <v-layout :row="screenSize" :column="!screenSize">
-            <v-flex>
-              <info-text v-for="item in basic" :key="item.title" :title="item.title" :content="item.content"></info-text>
-            </v-flex>
-            <v-flex>
-              <info-text v-for="item in additional" :key="item.title" :title="item.title" :content="item.content"></info-text>
-            </v-flex>
-          </v-layout>
-        </v-container>
-      </v-layout>
-    </v-container>
+    <v-layout :row="screenSize" :column="!screenSize" v-resize="onSmallScreen">
+      <v-flex>
+        <v-avatar size="200px">
+          <img src="../../static/img/icons/cv-image.gif">
+        </v-avatar>
+      </v-flex>
+      <v-container>
+        <v-layout :row="screenSize" :column="!screenSize">
+          <v-flex>
+            <info-text v-for="item in basic" :key="item.title" :title="item.title" :content="item.content"></info-text>
+          </v-flex>
+          <v-flex>
+            <info-text v-for="item in additional" :key="item.title" :title="item.title" :content="item.content"></info-text>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-layout>
+
+    <!-- Divider  -->
     <v-container class="divider-container" pa-0 pt-3 pb-3>
       <v-divider></v-divider>
     </v-container>
+
+    <!-- Bio  -->
     <v-card flat class="transparent">
       <v-card-text>{{ bio.content }}</v-card-text>
     </v-card>
+
+    <!-- Buttons  -->
     <v-btn icon flat :href="this.github" pa-0 ma-0>
         <img src="../assets/GitHub-Mark-32px.png" size="16px">
     </v-btn>
     <v-btn icon flat :href="this.linkedin" pa-0 ma-0>
       <img src="../assets/In-Black-34px-TM.png" size="16px">
     </v-btn>
+
   </v-container>
 </template>
 
@@ -103,6 +108,6 @@ export default {
 </script>
 <style>
 .about-container {
-  /* padding: 0; */
+  padding: 0;
 }
 </style>

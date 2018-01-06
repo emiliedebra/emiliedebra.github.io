@@ -1,18 +1,26 @@
 <template>
   <v-app v-resize="onResize" ref="app">
+    <!-- <v-content> -->
       <v-container :fill-height="!enter" pt-0 class="title-container">
-        <v-flex column>
+        <v-layout column>
+
+          <!-- Before Enter -->
           <name-bar :text="textSize" key="name-center" v-if="!enter"></name-bar>
           <enter-bar v-if="!enter" @enter="enterCV"></enter-bar>
+
+          <!-- After Enter -->
           <transition name="slide-fade">
             <name-bar :text="textSize" v-if="enter"></name-bar>
           </transition>
           <transition name="slide-fade">
             <title-bar key="title" v-if="enter" @changePage="change"></title-bar>
           </transition>
-        </v-flex>
+        </v-layout>
       </v-container>
-    <page-view v-if="enter" :pressed="pageButton"></page-view>
+      <v-content v-if="enter">
+        <page-view :pressed="pageButton"></page-view>
+      </v-content>
+    <!-- </v-content> -->
   </v-app>
 </template>
 
@@ -103,7 +111,7 @@ body {
     padding: 0;
     padding-top: 20px;
     max-width: 650px;
-    max-height: 230px;
+    max-height: 200px;
 }
 
 .divider-container {

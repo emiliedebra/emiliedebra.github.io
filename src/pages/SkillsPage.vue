@@ -3,9 +3,11 @@
 <template>
   <v-container flat class="page text-xs-center">
     <v-container class="width-limit-1000">
-      <v-flex row>
-        <v-chip outline :key="item" v-for="item in skills">{{ item }}</v-chip>
-      </v-flex>
+      <v-layout row>
+        <v-flex>
+          <v-chip outline :key="item" v-for="item in skills">{{ item }}</v-chip>
+        </v-flex>
+      </v-layout>
     </v-container>
     <skills-text v-for="item in skillsExplained" :key="item.title" :title="item.title" :content="item.content"></skills-text>
   </v-container>
