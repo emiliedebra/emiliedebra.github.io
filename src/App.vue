@@ -17,9 +17,11 @@
           </transition>
         </v-layout>
       </v-container>
-      <v-content v-if="enter">
-        <page-view :pressed="pageButton"></page-view>
-      </v-content>
+      <transition name="slide-fade">
+        <v-content v-if="enter">
+          <page-view :pressed="pageButton"></page-view>
+        </v-content>
+      </transition>
     <!-- </v-content> -->
   </v-app>
 </template>
@@ -37,7 +39,7 @@ export default {
       screenSize: false,
       textSize: '70px',
       enter: false,
-      pageButton: '',
+      pageButton: 'about',
     };
   },
   computed: {
@@ -101,18 +103,24 @@ body {
 #app {
   font-family: 'Roboto', sans-serif;
   color: #2c3e50;
-  background-color: #d7ccc8;
-  background-color: #bdbdbd;
+  background-color: #cfd8dc;
+  /* background-color: #f7ffd8; */
+  /* background-color: #f0ffe8; */
+  /* background-color: #d7ccc8; */
+  /* background-color: #bdbdbd; */
   min-width: 200px;
   /* min-height: 400px; */
 }
 
 .application .theme--light.chip, .theme--light .chip {
-  background-color: #707070;
+  background-color: #9ea7aa;
+  /* background-color: #c4cca6; */
+  /* background-color: #bdccb6; */
+  /* background-color: #707070; */
 }
 
 .chip.chip--outline {
-  border-color: #1b1b1b;
+  border-color: #9ea7aa;
   color: #1b1b1b;
 }
 

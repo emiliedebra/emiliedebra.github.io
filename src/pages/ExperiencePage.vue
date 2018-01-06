@@ -1,7 +1,7 @@
 <!-- Experience Page -->
 
 <template>
-  <v-container flat class="width-limit-800 text-xs-left">
+  <v-container flat class="width-limit-800" text-xs-left>
     <h3>Projects</h3>
     <project-text v-for="item in projects" :key="item.company" :content="item"></project-text>
     <v-container class="divider-container" pa-0 pt-3 pb-3>

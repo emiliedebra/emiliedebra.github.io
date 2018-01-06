@@ -1,25 +1,26 @@
 <template>
   <v-container flat class="title" text-xs-center v-resize="onSmallScreen">
-    <v-menu offset-y v-if="screenSize">
-      <v-btn flat transparent slot="activator">
-        <v-icon v-if="this.menuName===''">menu</v-icon>
-        {{ menuName }}
-        <v-icon v-if="this.menuName!==''">keyboard_arrow_down</v-icon>
-      </v-btn>
-      <v-list>
-        <v-list-tile v-for="item in menuItems" :key="item.title" @click="select(item)">
-          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-menu>
-    <v-flex v-if="!screenSize">
-      <v-btn-toggle v-model="selected">
-        <v-btn flat>About Me</v-btn>
-        <v-btn flat>Skills</v-btn>
-        <v-btn flat>Experience</v-btn>
-        <v-btn flat>Education</v-btn>
-      </v-btn-toggle>
-    </v-flex>
+    <!-- <transition name="fade" mode="out-in"> -->
+      <v-menu offset-y v-if="screenSize">
+        <v-btn flat transparent slot="activator">
+          {{ menuName }}
+          <v-icon>keyboard_arrow_down</v-icon>
+        </v-btn>
+        <v-list>
+          <v-list-tile v-for="item in menuItems" :key="item.title" @click="select(item)">
+            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+      <v-flex v-if="!screenSize">
+        <v-btn-toggle mandatory v-model="selected">
+          <v-btn flat>About Me</v-btn>
+          <v-btn flat>Skills</v-btn>
+          <v-btn flat>Experience</v-btn>
+          <v-btn flat>Education</v-btn>
+        </v-btn-toggle>
+      </v-flex>
+    <!-- </transition> -->
   </v-container>
 </template>
 
@@ -29,8 +30,8 @@ export default {
   data() {
     return {
       screenSize: false,
-      selected: null,
-      menuName: '',
+      selected: 0,
+      menuName: 'About Me',
       menuItems: [
         {
           title: 'About Me',
@@ -53,11 +54,7 @@ export default {
   },
   watch: {
     selected() {
-      if (this.selected !== null) {
-        this.menuName = this.menuItems[this.selected].title;
-      } else {
-        this.menuName = '';
-      }
+      this.menuName = this.menuItems[this.selected].title;
       this.$emit('changePage', this.selected);
     },
   },
@@ -96,4 +93,20 @@ export default {
     padding: 0;
     margin: 0;
   }
+  .fade-enter-active {
+  transition: opacity 0.01s;
+  }
+
+  .fade-leave-active  {
+    transition: opacity 0.01s;
+  }
+
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0
+  }
+
+  .fade-enter-to, .fade-leave {
+    opacity: 1;
+  }
+
 </style>

@@ -1,6 +1,6 @@
 <!-- About Page -->
 <template>
-  <v-container text-xs-center class="width-limit-800 about-container">
+  <v-container text-xs-center class="width-limit-800">
     <v-layout :row="screenSize" :column="!screenSize" v-resize="onSmallScreen">
       <v-flex>
         <v-avatar size="200px">
@@ -94,7 +94,7 @@ export default {
   },
   methods: {
     onSmallScreen() {
-      if (window.innerWidth < 1000) { // change to State
+      if (window.innerWidth < 900) { // change to State
         this.screenSize = false;
       } else {
         this.screenSize = true;
@@ -107,7 +107,4 @@ export default {
 };
 </script>
 <style>
-.about-container {
-  padding: 0;
-}
 </style>

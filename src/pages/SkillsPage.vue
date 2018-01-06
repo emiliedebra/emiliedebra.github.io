@@ -1,7 +1,7 @@
 <!-- Skills Page -->
 
 <template>
-  <v-container flat class="page text-xs-center">
+  <v-container flat text-xs-center>
     <v-container class="width-limit-1000">
       <v-layout row>
         <v-flex>
