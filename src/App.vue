@@ -101,10 +101,19 @@ body {
 #app {
   font-family: 'Roboto', sans-serif;
   color: #2c3e50;
-  background-color: #fafafa;
+  background-color: #d7ccc8;
+  background-color: #bdbdbd;
   min-width: 200px;
   /* min-height: 400px; */
-  /* background-color: #f9fbe7; */
+}
+
+.application .theme--light.chip, .theme--light .chip {
+  background-color: #707070;
+}
+
+.chip.chip--outline {
+  border-color: #1b1b1b;
+  color: #1b1b1b;
 }
 
 .title-container {

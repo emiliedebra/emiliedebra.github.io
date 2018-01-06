@@ -1,11 +1,13 @@
 <template>
   <v-container flat class="title" text-xs-center v-resize="onSmallScreen">
     <v-menu offset-y v-if="screenSize">
-      <v-btn slot="activator" icon>
-        <v-icon>menu</v-icon>
+      <v-btn flat transparent slot="activator">
+        <v-icon v-if="this.menuName===''">menu</v-icon>
+        {{ menuName }}
+        <v-icon v-if="this.menuName!==''">keyboard_arrow_down</v-icon>
       </v-btn>
       <v-list>
-        <v-list-tile v-for="item in menuItems" :key="item.title" @click="selected=item.number">
+        <v-list-tile v-for="item in menuItems" :key="item.title" @click="select(item)">
           <v-list-tile-title>{{ item.title }}</v-list-tile-title>
         </v-list-tile>
       </v-list>
@@ -28,6 +30,7 @@ export default {
     return {
       screenSize: false,
       selected: null,
+      menuName: '',
       menuItems: [
         {
           title: 'About Me',
@@ -54,6 +57,10 @@ export default {
     },
   },
   methods: {
+    select(item) {
+      this.selected=item.number;
+      this.menuName = ` ${item.title}`;
+    },
     onSmallScreen() {
       if (window.innerWidth > 1000) {
         this.screenSize = false;
