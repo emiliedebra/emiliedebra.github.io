@@ -5,7 +5,7 @@
     <v-container class="width-limit-1000">
       <v-layout row>
         <v-flex>
-          <v-chip outline :key="item" v-for="item in skills">{{ item }}</v-chip>
+          <v-chip outline disabled :key="item" v-for="item in skills">{{ item }}</v-chip>
         </v-flex>
       </v-layout>
     </v-container>

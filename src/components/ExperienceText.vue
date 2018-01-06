@@ -10,7 +10,10 @@
         <ul>{{ content.description }}</ul>
       </v-flex>
       <v-flex row>
-        <v-chip :key="item" v-for="item in content.techUsed">{{ item }}</v-chip>
+        <v-tooltip top :key="item.title" v-for="item in content.techUsed">
+          <v-chip disabled slot="activator">{{ item.title }}</v-chip>
+          <span>{{ item.content }}</span>
+        </v-tooltip>
       </v-flex>
     </v-layout>
   </v-container>

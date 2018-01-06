@@ -124,6 +124,11 @@ body {
   color: #1b1b1b;
 }
 
+.chip:hover, .chip.chip--outline:hover {
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+}
+
 .title-container {
     padding: 0;
     padding-top: 20px;

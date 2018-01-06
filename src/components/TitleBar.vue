@@ -1,6 +1,6 @@
 <template>
   <v-container flat class="title" text-xs-center>
-    <!-- <transition name="fade" mode="out-in"> -->
+    <transition name="fade-title" mode="out-in">
       <v-menu offset-y v-if="$mq.resize && $mq.below('650px')">
         <v-btn flat transparent slot="activator">
           {{ menuName }}
@@ -20,7 +20,7 @@
           <v-btn flat>Education</v-btn>
         </v-btn-toggle>
       </v-flex>
-    <!-- </transition> -->
+    </transition>
   </v-container>
 </template>
 
@@ -93,19 +93,19 @@ export default {
     padding: 0;
     margin: 0;
   }
-  .fade-enter-active {
-  transition: opacity 0.01s;
+  .fade-title-enter-active {
+  transition: opacity 0.1s;
   }
 
-  .fade-leave-active  {
-    transition: opacity 0.01s;
+  .fade-title-leave-active  {
+    transition: opacity 0.1s;
   }
 
-  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  .fade-title-enter, .fade-title-leave-to /* .fade-title-leave-active below version 2.1.8 */ {
     opacity: 0
   }
 
-  .fade-enter-to, .fade-leave {
+  .fade-title-enter-to, .fade-title-leave {
     opacity: 1;
   }
 

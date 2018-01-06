@@ -28,7 +28,39 @@ export default {
           description: `Developed the frontend and a partial backend of a web-application designed to allow
           easy management of a database of research papers related to the Center of Aritificial Intelligence Research
           in South Africa.`,
-          techUsed: ['Vue.js', 'Vuex', 'Vuetify', 'Vue Axios', 'Node.js', 'Babel', 'Express', 'MySQL'],
+          techUsed: [
+            {
+              title: 'Vue.js',
+              content: 'Developement of web-application',
+            },
+            {
+              title: 'Vuex',
+              content: 'Used for global app state handling',
+            },
+            {
+              title: 'Vuetify',
+              content: 'Implementation of material design',
+            },
+            {
+              title: 'Vue Axios',
+              content: 'HTTP request handling',
+            },
+            {
+              title: 'Node.js',
+              content: 'Backend developement',
+            },
+            {
+              title: 'Babel',
+              content: 'ES6 to browser compilation',
+            },
+            {
+              title: 'Express',
+              content: '',
+            },
+            {
+              title: 'MySQL',
+              content: 'Database handling',
+            }],
         },
         {
           title: 'Physical Step Sequencer',
@@ -37,19 +69,47 @@ export default {
           link: 'https://github.com/emiliedebra/embedded-project',
           description: `Developed a physical implementation of a step sequencer using an STM32F4Discovery Evaluation
            Board. Audio waveforms were synthesised using MatLab and C to mimic sound fonts of drum kits and piano scales.`,
-          techUsed: ['C', 'Atollic', 'MatLab', 'LaTeX'],
-
+          techUsed: [
+            {
+              title: 'C',
+              content: 'Programming language used for ARM',
+            },
+            {
+              title: 'Atollic',
+              content: 'Used for compilation and linking to STM',
+            },
+            {
+              title: 'MatLab',
+              content: 'Audio waveform manipulation',
+            },
+            {
+              title: 'LaTeX',
+              content: 'Report handling',
+            },
+          ],
         },
       ],
       experiences: [
         {
-          title: 'Vac Work',
+          title: 'Backend Developer',
           company: 'AnotherwayTech',
           date: 'December 2017 - Present',
           description: `Involvement in the back-end development of a CryptoCurrency trading system using Javascript/ES6/7,
            Node.js and Flow. Currently tasked with writing exchange API’s.`,
-          techUsed: ['Javascript/ES6/7', 'Node.js', 'Flow'],
-
+          techUsed: [
+            {
+              title: 'Javascript/ES6/7',
+              content: 'Familiarity with modern syntax',
+            },
+            {
+              title: 'Node.js',
+              content: 'Backend Development',
+            },
+            {
+              title: 'Flow',
+              content: 'Syntactical type-checking',
+            },
+          ],
         },
         {
           title: 'Private Tutor',
@@ -57,8 +117,16 @@ export default {
           date: 'January 2017 - November 2017',
           description: `Private Tutor for a 1st Year Electrical and Computer Engineering Student at the University of Cape Town
           (focus on Computer Science and Electrical Engineering Basics)`,
-          techUsed: ['Python', 'Java'],
-
+          techUsed: [
+            {
+              title: 'Python',
+              content: 'Basic IO manipulation',
+            },
+            {
+              title: 'Java',
+              content: 'Basic IO interaction, Swing',
+            },
+          ],
         },
         {
           title: 'Computer Science Tutor ',
@@ -66,8 +134,16 @@ export default {
           date: 'January 2016 - November 2017',
           description: `Tutor for the 1st year Computer Science (CSC1015F, CSC1016S)
           Courses in basic Python and Java.`,
-          techUsed: ['Python', 'Java'],
-
+          techUsed: [
+            {
+              title: 'Python',
+              content: 'Basic IO manipulation',
+            },
+            {
+              title: 'Java',
+              content: 'Basic IO interaction, Swing',
+            },
+          ],
         },
         {
           title: 'Vac Work',
@@ -76,7 +152,40 @@ export default {
           description: `Part-time involvement in the back-end development of business applications using Javascript (ES6)
           and Node.js components which drew on technologies such as GraphQL, ArangoDB and Koa.
           Some exposure to front-end technologies such as Google Polymer, HTML5 and CSS, as well as Google’s Material Design.`,
-          techUsed: ['Javascript/ES6', 'Node.js', 'GraphQL', 'ArangoDB', 'Koa', 'Google Polymer', 'HTM5 and CSS', 'Babel'],
+          techUsed: [
+            {
+              title: 'Javascript/ES6',
+              content: 'Development using modern syntax',
+            },
+            {
+              title: 'Node.js',
+              content: '',
+            },
+            {
+              title: 'GraphQL',
+              content: 'NoSQL framework',
+            },
+            {
+              title: 'ArangoDB',
+              content: 'Use of graph design',
+            },
+            {
+              title: 'Koa',
+              content: '',
+            },
+            {
+              title: 'Google Polymer',
+              content: 'Material Design familiarity',
+            },
+            {
+              title: 'HTM5 and CSS',
+              content: 'Use with Vue and Polymer',
+            },
+            {
+              title: 'Babel',
+              content: 'ES6 to broswer compatibility compilation',
+            },
+          ],
         },
       ],
     };

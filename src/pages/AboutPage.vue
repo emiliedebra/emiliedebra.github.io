@@ -1,8 +1,10 @@
 <!-- About Page -->
 <template>
   <v-container text-xs-center class="width-limit-800">
-    <basic-info-bar-row v-if="$mq.resize && $mq.above('650px')"></basic-info-bar-row>
-    <basic-info-bar-col v-if="$mq.resize && $mq.below('650px')"></basic-info-bar-col>
+    <transition name="fade-about" mode="out-in">
+      <basic-info-bar-row v-if="$mq.resize && $mq.above('650px')"></basic-info-bar-row>
+      <basic-info-bar-col v-if="$mq.resize && $mq.below('650px')"></basic-info-bar-col>
+    </transition>
     <!-- Divider  -->
     <v-container class="divider-container" pa-0 pt-3 pb-3>
       <v-divider></v-divider>
@@ -14,13 +16,18 @@
     </v-card>
 
     <!-- Buttons  -->
-    <v-btn icon flat :href="this.github" target="_blank" pa-0 ma-0>
-        <img src="../assets/GitHub-Mark-32px.png" size="16px">
-    </v-btn>
-    <v-btn icon flat :href="this.linkedin" target="_blank" pa-0 ma-0>
-      <img src="../assets/In-Black-34px-TM.png" size="16px">
-    </v-btn>
-
+    <v-tooltip top>
+      <v-btn icon flat :href="this.github" target="_blank" slot="activator" pa-0 ma-0>
+          <img src="../assets/GitHub-Mark-32px.png" size="16px">
+      </v-btn>
+      <span>View GitHub Profile</span>
+    </v-tooltip>
+    <v-tooltip top>
+      <v-btn icon flat :href="this.linkedin" target="_blank" slot="activator" pa-0 ma-0>
+        <img src="../assets/In-Black-34px-TM.png" size="16px">
+      </v-btn>
+      <span>View LinkedIn Profile</span>
+    </v-tooltip>
   </v-container>
 </template>
 
@@ -96,4 +103,20 @@ export default {
 };
 </script>
 <style>
+  .fade-about-enter-active {
+  transition: opacity 0.1s;
+  }
+
+  .fade-about-leave-active  {
+    transition: opacity 0.1s;
+  }
+
+  .fade-about-enter, .fade-about-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0
+  }
+
+  .fade-about-enter-to, .fade-about-leave {
+    opacity: 1;
+  }
+
 </style>

@@ -11,12 +11,18 @@
           <ul>{{ content.institution }}</ul>
           <ul>{{ content.description }}</ul>
         </v-flex>
-        <v-btn icon flat :href="this.content.link" target="_blank">
-          <img src="../assets/GitHub-Mark-32px.png" size="16px">
-        </v-btn>
+        <v-tooltip top>
+          <v-btn icon flat :href="this.content.link" slot="activator" target="_blank">
+            <img src="../assets/GitHub-Mark-32px.png" size="16px">
+          </v-btn>
+          <span>View project repo</span>
+        </v-tooltip>
       </v-layout>
       <v-flex row>
-        <v-chip :key="item" v-for="item in content.techUsed">{{ item }}</v-chip>
+        <v-tooltip top :key="item.title" v-for="item in content.techUsed">
+          <v-chip disabled slot="activator">{{ item.title }}</v-chip>
+          <span>{{ item.content }}</span>
+        </v-tooltip>
       </v-flex>
     </v-layout>
   </v-container>
