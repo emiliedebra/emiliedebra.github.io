@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: 'education-text',
+  name: 'project-text',
   props: ['content'],
 };
 </script>

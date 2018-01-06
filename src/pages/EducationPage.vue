@@ -1,18 +1,14 @@
 <!-- Education Page -->
 
 <template>
-  <v-container flat pa-0 class="page text-xs-center">
-    <v-container class="width-limit-500 text-xs-left" pa-0>
-      <h3>Tertiary Education</h3>
-      <education-text v-for="item in tertiary" :key="item.title" :content="item"></education-text>
-    </v-container>
+  <v-container flat class="width-limit-500 text-xs-left">
+    <h3>Tertiary Education</h3>
+    <education-text v-for="item in tertiary" :key="item.title" :content="item"></education-text>
     <v-container class="divider-container" pa-0 pt-3 pb-3>
       <v-divider></v-divider>
     </v-container>
-    <v-container class="width-limit-500 text-xs-left" pa-0>
-      <h3>Secondary Education</h3>
-      <education-text v-for="item in secondary" :key="item.title" :content="item"></education-text>
-    </v-container>
+    <h3>Secondary Education</h3>
+    <education-text v-for="item in secondary" :key="item.title" :content="item"></education-text>
   </v-container>
 </template>
 

@@ -111,7 +111,8 @@ body {
     padding: 0;
     padding-top: 20px;
     max-width: 650px;
-    max-height: 200px;
+    max-height: 174px;
+    /* min-height: 180px; */
 }
 
 .divider-container {
