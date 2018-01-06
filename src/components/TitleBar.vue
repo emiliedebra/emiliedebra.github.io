@@ -1,7 +1,7 @@
 <template>
-  <v-container flat class="title" text-xs-center v-resize="onSmallScreen">
+  <v-container flat class="title" text-xs-center>
     <!-- <transition name="fade" mode="out-in"> -->
-      <v-menu offset-y v-if="screenSize">
+      <v-menu offset-y v-if="$mq.resize && $mq.below('650px')">
         <v-btn flat transparent slot="activator">
           {{ menuName }}
           <v-icon>keyboard_arrow_down</v-icon>
@@ -12,7 +12,7 @@
           </v-list-tile>
         </v-list>
       </v-menu>
-      <v-flex v-if="!screenSize">
+      <v-flex v-if="$mq.resize && $mq.above('650px')">
         <v-btn-toggle mandatory v-model="selected">
           <v-btn flat>About Me</v-btn>
           <v-btn flat>Skills</v-btn>
@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     select(item) {
-      this.selected=item.number;
+      this.selected = item.number;
       this.menuName = ` ${item.title}`;
     },
     onSmallScreen() {

@@ -1,24 +1,8 @@
 <!-- About Page -->
 <template>
   <v-container text-xs-center class="width-limit-800">
-    <v-layout :row="screenSize" :column="!screenSize" v-resize="onSmallScreen">
-      <v-flex>
-        <v-avatar size="200px">
-          <img src="../../static/img/icons/cv-image.gif">
-        </v-avatar>
-      </v-flex>
-      <v-container>
-        <v-layout :row="screenSize" :column="!screenSize">
-          <v-flex>
-            <info-text v-for="item in basic" :key="item.title" :title="item.title" :content="item.content"></info-text>
-          </v-flex>
-          <v-flex>
-            <info-text v-for="item in additional" :key="item.title" :title="item.title" :content="item.content"></info-text>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-layout>
-
+    <basic-info-bar-row v-if="$mq.resize && $mq.above('650px')"></basic-info-bar-row>
+    <basic-info-bar-col v-if="$mq.resize && $mq.below('650px')"></basic-info-bar-col>
     <!-- Divider  -->
     <v-container class="divider-container" pa-0 pt-3 pb-3>
       <v-divider></v-divider>
@@ -42,6 +26,8 @@
 
 <script>
 import InfoText from '../components/InfoText.vue';
+import BasicInfoBarCol from '../components/BasicInfoBarCol.vue';
+import BasicInfoBarRow from '../components/BasicInfoBarRow.vue';
 
 export default {
   name: 'about',
@@ -85,24 +71,27 @@ export default {
         solving life's continuous complex problems. This gets applied well in the software development industry,
         in which I have several years of student vacation work experience developing business applications,
         both back end and front end. Whilst software engineering utilises my practical and technical side,
-        I am a music and dance enthusiast and am able to approach design problems from an artistic and creative perspective as well.
+        I am a music and dance enthusiast and am able to approach design problems from
+        an artistic and creative perspective as well.
         My problem-solving ability is applied throughout all aspects of my life, and I am continuously seeking to gain knowledge.
         When not gaining this knowledge in a software environment, I am an advocate for self-improvement,
         and am continuously striving for increased physical and mental health.`,
       },
     };
   },
-  methods: {
-    onSmallScreen() {
-      if (this.$mq.below(900)) { // change to State
-        this.screenSize = false;
-      } else {
-        this.screenSize = true;
-      }
-    },
-  },
+  // methods: {
+  //   onSmallScreen() {
+  //     if (this.$mq.below(900)) { // change to State
+  //       this.screenSize = false;
+  //     } else {
+  //       this.screenSize = true;
+  //     }
+  //   },
+  // },
   components: {
     InfoText,
+    BasicInfoBarRow,
+    BasicInfoBarCol,
   },
 };
 </script>
