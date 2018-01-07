@@ -1,16 +1,21 @@
+<!-- Project Text -->
+
 <template>
   <v-container class="width-limit-800 text-xs-left" pa-0 pt-2 pb-2>
     <v-layout column>
+      <!-- Title -->
       <v-flex>
         <v-layout row>
           <h3>{{ content.title }}</h3>
         </v-layout>
       </v-flex>
+      <!-- Info -->
       <v-layout row>
         <v-flex text-align-left pr-1>
           <ul>{{ content.institution }}</ul>
           <ul>{{ content.description }}</ul>
         </v-flex>
+        <!-- External Repo Link -->
         <v-tooltip top>
           <v-btn icon flat :href="this.content.link" slot="activator" target="_blank">
             <img src="../assets/GitHub-Mark-32px.png" size="16px">
@@ -18,6 +23,7 @@
           <span>View project repo</span>
         </v-tooltip>
       </v-layout>
+      <!-- Tech Chips -->
       <v-flex row>
         <v-tooltip top :key="item.title" v-for="item in content.techUsed">
           <v-chip disabled slot="activator">{{ item.title }}</v-chip>

@@ -1,3 +1,5 @@
+<!-- Title Bar -->
+
 <template>
   <v-container flat class="title" text-xs-center>
     <v-flex id="small">
@@ -86,7 +88,7 @@ export default {
     #small { display: block }
   }
 
-  /* Theming */
+  /* Button Restyling */
   .theme--light .btn-toggle {
     background: none;
   }

@@ -1,43 +1,39 @@
 <template>
-  <v-app v-resize="onResize" ref="app">
-    <!-- <v-content> -->
-      <v-container :fill-height="!enter" pt-0 class="title-container">
-        <v-layout column>
+  <v-app ref="app">
+    <v-container :fill-height="!enter" pt-0 class="title-container">
+      <v-layout column>
 
-          <!-- Before Enter -->
-          <name-bar :text="textSize" key="name-center" v-if="!enter"></name-bar>
-          <enter-bar v-if="!enter" @enter="enterCV"></enter-bar>
+        <!-- Before Enter -->
+        <name-bar key="name-center" v-if="!enter"></name-bar>
+        <enter-bar v-if="!enter" @enter="enterCV"></enter-bar>
 
-          <!-- After Enter -->
-          <transition name="slide-fade">
-            <name-bar :text="textSize" v-if="enter"></name-bar>
-          </transition>
-          <transition name="slide-fade">
-            <title-bar key="title" v-if="enter" @changePage="change"></title-bar>
-          </transition>
-        </v-layout>
-      </v-container>
-      <transition name="slide-fade">
-        <v-content v-if="enter">
-          <page-view :pressed="pageButton"></page-view>
-        </v-content>
-      </transition>
-    <!-- </v-content> -->
+        <!-- After Enter -->
+        <transition name="slide-fade">
+          <name-bar v-if="enter"></name-bar>
+        </transition>
+        <transition name="slide-fade">
+          <title-bar key="title" v-if="enter" @changePage="change"></title-bar>
+        </transition>
+      </v-layout>
+    </v-container>
+    <transition name="slide-fade">
+      <v-content v-if="enter">
+        <page-view :pressed="pageButton"></page-view>
+      </v-content>
+    </transition>
   </v-app>
 </template>
 
 <script>
-import NameBar from '../src/components/NameBar.vue';
-import TitleBar from '../src/components/TitleBar.vue';
-import EnterBar from '../src/components/EnterBar.vue';
+import NameBar from '../src/components/bars/NameBar.vue';
+import TitleBar from '../src/components/bars/TitleBar.vue';
+import EnterBar from '../src/components/bars/EnterBar.vue';
 import PageView from '../src/pages/PageView.vue';
 
 export default {
   name: 'app',
   data() {
     return {
-      screenSize: false,
-      textSize: '70px',
       enter: false,
       pageButton: 'about',
     };
@@ -66,13 +62,6 @@ export default {
           this.pageButton = null;
       }
     },
-    onResize() {
-      if (this.$mq.below(600)) {
-        this.textSize = '30px';
-      } else {
-        this.textSize = '70px';
-      }
-    },
   },
   components: {
     NameBar,
@@ -84,22 +73,20 @@ export default {
 </script>
 
 <style>
-body {
-  margin: 0;
-}
-/* Enter and leave animations can use different */
-/* durations and timing functions.              */
+
+ /* Transitions */
 .slide-fade-enter-active {
   transition: all .3s ease;
 }
 .slide-fade-leave-active {
   transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
+.slide-fade-enter, .slide-fade-leave-to {
   transform: translateY(150px);
   opacity: 0;
 }
+
+/* App Restyling */
 #app {
   font-family: 'Roboto', sans-serif;
   color: #2c3e50;
@@ -112,6 +99,7 @@ body {
   /* min-height: 400px; */
 }
 
+  /* Chip restyling */
 .application .theme--light.chip, .theme--light .chip {
   background-color: #9ea7aa;
   /* background-color: #c4cca6; */
@@ -129,6 +117,7 @@ body {
     border-color: #2c3e50;
 }
 
+ /* Container Restyling */
 .title-container {
     padding: 0;
     padding-top: 20px;
@@ -144,6 +133,7 @@ body {
   padding-top: 3;
 }
 
+ /* Custom Classes */
 .width-limit-500 {
   max-width: 500px;
 }
@@ -164,18 +154,7 @@ body {
   background-color: none;
 }
 
-.fade-enter-active {
-  transition: opacity 0.5s;
-}
-
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0
-}
-
-.fade-enter-to, .fade-leave {
-  opacity: 1;
-}
-
+/* Text Restyling */
 h1 {
   font-weight: 200;
   font-size: 70px;
@@ -183,11 +162,9 @@ h1 {
 
 h3 {
   font-weight: 200;
-  /* font-size: 70px; */
 }
 
 h2 {
   font-weight: 200;
-  /* font-size: 70px; */
 }
 </style>

@@ -30,10 +30,12 @@ export default {
 </script>
 
 <style>
+
 .page {
   padding: 0;
 }
 
+ /* Transitions */
 .fade-enter-active {
   transition: opacity 0.5s;
 }

@@ -1,15 +1,16 @@
+<!-- Name Bar -->
+
 <template>
-  <v-container ref="name" class="name-bar text-xs-center">
-    <h1 :style="{ fontSize: '70px' }" id="small" key="small">{{ initials }}</h1>
-    <h1 :style="{ fontSize: '70px' }" id="full" key="full">{{ name }}</h1>
+  <v-container ref="name" text-xs-center>
+    <h1 id="small">{{ initials }}</h1>
+    <h1 id="full">{{ name }}</h1>
     <v-divider></v-divider>
   </v-container>
 </template>
 
 <script>
 export default {
-  name: 'title-bar',
-  props: ['text'],
+  name: 'name-bar',
   data() {
     return {
       name: 'emilie debra wood',

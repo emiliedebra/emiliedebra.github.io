@@ -1,9 +1,13 @@
+<!-- Skills Text -->
+
 <template>
   <v-container class="width-limit-600 text-xs-left" pt-2>
     <v-layout column>
+      <!-- Title -->
       <v-flex>
         <h3>{{ title }}</h3>
       </v-flex>
+      <!-- Bullet Points -->
       <v-flex text-align-left>
         <li v-for="item in content" :key="item">
           {{ item }}

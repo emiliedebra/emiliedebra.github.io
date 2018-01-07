@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import SkillsText from '../components/SkillsText.vue';
+import SkillsText from '../components/text/SkillsText.vue';
 
 export default {
   name: 'skills',

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import EducationText from '../components/EducationText.vue';
+import EducationText from '../components/text/EducationText.vue';
 
 export default {
   name: 'education',

@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import ExperienceText from '../components/ExperienceText.vue';
-import ProjectText from '../components/ProjectText.vue';
+import ExperienceText from '../components/text/ExperienceText.vue';
+import ProjectText from '../components/text/ProjectText.vue';
 
 export default {
   name: 'experience',

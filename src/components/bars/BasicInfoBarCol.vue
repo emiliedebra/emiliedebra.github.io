@@ -1,16 +1,22 @@
+<!-- Basic Info Bar -->
+
 <template>
   <v-container>
-    <v-layout row>
+    <v-layout column>
+      <!-- Avatar -->
       <v-flex>
         <v-avatar size="200px">
-          <img src="../../static/img/icons/cv-image.gif">
+          <img src="../../../static/img/icons/cv-image.gif">
         </v-avatar>
       </v-flex>
+      <!-- Text Info -->
       <v-container>
-        <v-layout row>
+        <v-layout column>
+          <!-- Basic Info -->
           <v-flex>
             <info-text v-for="item in basic" :key="item.title" :title="item.title" :content="item.content"></info-text>
           </v-flex>
+          <!-- Additional Info -->
           <v-flex>
             <info-text v-for="item in additional" :key="item.title" :title="item.title" :content="item.content"></info-text>
           </v-flex>
@@ -21,10 +27,10 @@
 </template>
 
 <script>
-import InfoText from '../components/InfoText.vue';
+import InfoText from '../text/InfoText.vue';
 
 export default {
-  name: 'basic-info-bar-row',
+  name: 'basic-info-bar-col',
   data() {
     return {
       basic: [

@@ -1,6 +1,7 @@
 <!-- About Page -->
 <template>
   <v-container text-xs-center class="width-limit-800">
+    <!-- Basic Info -->
     <basic-info-bar-row id="row"></basic-info-bar-row>
     <basic-info-bar-col id="col"></basic-info-bar-col>
 
@@ -31,15 +32,14 @@
 </template>
 
 <script>
-import InfoText from '../components/InfoText.vue';
-import BasicInfoBarCol from '../components/BasicInfoBarCol.vue';
-import BasicInfoBarRow from '../components/BasicInfoBarRow.vue';
+import InfoText from '../components/text/InfoText.vue';
+import BasicInfoBarCol from '../components/bars/BasicInfoBarCol.vue';
+import BasicInfoBarRow from '../components/bars/BasicInfoBarRow.vue';
 
 export default {
   name: 'about',
   data() {
     return {
-      screenSize: true,
       github: 'https://github.com/emiliedebra',
       linkedin: 'https://www.linkedin.com/in/emilie-wood/',
       basic: [

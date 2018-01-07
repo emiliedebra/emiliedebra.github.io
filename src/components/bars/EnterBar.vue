@@ -1,3 +1,4 @@
+<!-- Enter Bar -->
 <template>
   <v-container pa-0 class="text-xs-center">
     <v-btn @click.native="enter" flat icon>
@@ -9,7 +10,7 @@
 <script>
 
 export default {
-  name: 'welcome',
+  name: 'enter-bar',
   methods: {
     enter() {
       this.$emit('enter');

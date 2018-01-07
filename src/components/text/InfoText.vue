@@ -1,3 +1,5 @@
+<!-- Info Text -->
+
 <template>
   <v-container pa-0>
     <v-layout row>
