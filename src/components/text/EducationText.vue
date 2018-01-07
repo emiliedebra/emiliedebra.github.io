@@ -27,7 +27,7 @@ export default {
     },
     logoLink() {
       // not used at this point
-      return `../assets/${this.content.logo}`;
+      return `../../assets/${this.content.logo}`;
     },
   },
 };

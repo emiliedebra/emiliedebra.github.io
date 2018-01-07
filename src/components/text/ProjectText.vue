@@ -18,7 +18,7 @@
         <!-- External Repo Link -->
         <v-tooltip top>
           <v-btn icon flat :href="this.content.link" slot="activator" target="_blank">
-            <img src="../assets/GitHub-Mark-32px.png" size="16px">
+            <img src="../../assets/GitHub-Mark-32px.png" size="16px">
           </v-btn>
           <span>View project repo</span>
         </v-tooltip>
