@@ -1,10 +1,9 @@
 <!-- About Page -->
 <template>
   <v-container text-xs-center class="width-limit-800">
-    <transition name="fade-about" mode="out-in">
-      <basic-info-bar-row v-if="$mq.resize && $mq.above('650px')"></basic-info-bar-row>
-      <basic-info-bar-col v-if="$mq.resize && $mq.below('650px')"></basic-info-bar-col>
-    </transition>
+    <basic-info-bar-row id="row"></basic-info-bar-row>
+    <basic-info-bar-col id="col"></basic-info-bar-col>
+
     <!-- Divider  -->
     <v-container class="divider-container" pa-0 pt-3 pb-3>
       <v-divider></v-divider>
@@ -86,15 +85,6 @@ export default {
       },
     };
   },
-  // methods: {
-  //   onSmallScreen() {
-  //     if (this.$mq.below(900)) { // change to State
-  //       this.screenSize = false;
-  //     } else {
-  //       this.screenSize = true;
-  //     }
-  //   },
-  // },
   components: {
     InfoText,
     BasicInfoBarRow,
@@ -103,20 +93,13 @@ export default {
 };
 </script>
 <style>
-  .fade-about-enter-active {
-  transition: opacity 0.1s;
+  /* Media Queries */
+  @media (min-width: 651px) {
+    #row { display: block }
+    #col { display: none }
   }
-
-  .fade-about-leave-active  {
-    transition: opacity 0.1s;
+  @media (min-width: 0px) and (max-width: 650px) {
+    #row { display: none }
+    #col { display: block }
   }
-
-  .fade-about-enter, .fade-about-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    opacity: 0
-  }
-
-  .fade-about-enter-to, .fade-about-leave {
-    opacity: 1;
-  }
-
 </style>

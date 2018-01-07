@@ -1,7 +1,7 @@
 <template>
   <v-container flat class="title" text-xs-center>
-    <transition name="fade-title" mode="out-in">
-      <v-menu offset-y v-if="$mq.resize && $mq.below('650px')">
+    <v-flex id="small">
+      <v-menu offset-y>
         <v-btn flat transparent slot="activator">
           {{ menuName }}
           <v-icon>keyboard_arrow_down</v-icon>
@@ -12,15 +12,15 @@
           </v-list-tile>
         </v-list>
       </v-menu>
-      <v-flex v-if="$mq.resize && $mq.above('650px')">
-        <v-btn-toggle mandatory v-model="selected">
-          <v-btn flat>About Me</v-btn>
-          <v-btn flat>Skills</v-btn>
-          <v-btn flat>Experience</v-btn>
-          <v-btn flat>Education</v-btn>
-        </v-btn-toggle>
-      </v-flex>
-    </transition>
+    </v-flex>
+    <v-flex id="full">
+      <v-btn-toggle mandatory v-model="selected">
+        <v-btn flat>About Me</v-btn>
+        <v-btn flat>Skills</v-btn>
+        <v-btn flat>Experience</v-btn>
+        <v-btn flat>Education</v-btn>
+      </v-btn-toggle>
+    </v-flex>
   </v-container>
 </template>
 
@@ -75,6 +75,18 @@ export default {
 </script>
 
 <style>
+  /* Media Queries */
+  @media (min-width: 651px) {
+    #full { display: block }
+    #small { display: none }
+  }
+
+  @media (min-width: 0px) and (max-width: 650px) {
+    #full { display: none }
+    #small { display: block }
+  }
+
+  /* Theming */
   .theme--light .btn-toggle {
     background: none;
   }
@@ -92,21 +104,6 @@ export default {
   .title {
     padding: 0;
     margin: 0;
-  }
-  .fade-title-enter-active {
-  transition: opacity 0.1s;
-  }
-
-  .fade-title-leave-active  {
-    transition: opacity 0.1s;
-  }
-
-  .fade-title-enter, .fade-title-leave-to /* .fade-title-leave-active below version 2.1.8 */ {
-    opacity: 0
-  }
-
-  .fade-title-enter-to, .fade-title-leave {
-    opacity: 1;
   }
 
 </style>

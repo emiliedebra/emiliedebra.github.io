@@ -1,9 +1,7 @@
 <template>
   <v-container ref="name" class="name-bar text-xs-center">
-    <transition name="fade-name" mode="out-in">
-      <h1 :style="{ fontSize: '70px' }" key="full" v-if="$mq.resize && $mq.above('650px')">{{ name }}</h1>
-      <h1 :style="{ fontSize: '70px' }" v-if="$mq.resize && $mq.below('650px')">{{ initials }}</h1>
-    </transition>
+    <h1 :style="{ fontSize: '70px' }" id="small" key="small">{{ initials }}</h1>
+    <h1 :style="{ fontSize: '70px' }" id="full" key="full">{{ name }}</h1>
     <v-divider></v-divider>
   </v-container>
 </template>
@@ -22,20 +20,14 @@ export default {
 </script>
 
 <style>
-  .fade-name-enter-active {
-  transition: opacity 0.1s;
+  /* Media Queries */
+  @media (min-width: 651px) {
+    #small { display: none }
+    #full { display: block }
   }
 
-  .fade-name-leave-active  {
-    transition: opacity 0.1s;
+  @media (min-width: 0px) and (max-width: 650px) {
+    #full { display: none }
+    #small { display: block }
   }
-
-  .fade-name-enter, .fade-name-leave-to /* .fade-name-leave-active below version 2.1.8 */ {
-    opacity: 0
-  }
-
-  .fade-name-enter-to, .fade-name-leave {
-    opacity: 1;
-  }
-
 </style>
