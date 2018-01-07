@@ -1,0 +1,21 @@
+{
+  "name": "emiliedebra.github.io",
+  "short_name": "emiliedebra",
+  "icons": [
+    {
+      "src": "./src/assets/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./src/assets/icon.png",
+
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#4DBA87"
+}
