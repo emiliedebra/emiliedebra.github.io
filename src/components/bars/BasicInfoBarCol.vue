@@ -1,7 +1,7 @@
 <!-- Basic Info Bar -->
 
 <template>
-  <v-container>
+  <v-container class="about-page">
     <v-layout column>
       <!-- Avatar -->
       <v-flex>

@@ -1,7 +1,7 @@
 <!-- Skills Page -->
 
 <template>
-  <v-container flat text-xs-center>
+  <v-container flat text-xs-center class="skills-page">
     <v-container class="width-limit-1000">
       <v-layout row>
         <v-flex>
@@ -141,4 +141,8 @@ export default {
 };
 </script>
 <style>
+.skills-page {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 </style>

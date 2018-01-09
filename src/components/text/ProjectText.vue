@@ -6,13 +6,13 @@
       <!-- Title -->
       <v-flex>
         <v-layout row>
-          <h3>{{ content.title }}</h3>
+          <h3 :style="{ fontSize: '20px' }">{{ content.title }}</h3>
         </v-layout>
       </v-flex>
       <!-- Info -->
       <v-layout row>
         <v-flex text-align-left pr-1>
-          <ul>{{ content.institution }}</ul>
+          <ul :style="{ fontStyle: 'italic' }">{{ content.institution }}</ul>
           <ul>{{ content.description }}</ul>
         </v-flex>
         <!-- External Repo Link -->

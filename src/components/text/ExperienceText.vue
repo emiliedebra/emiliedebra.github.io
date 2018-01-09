@@ -6,7 +6,7 @@
       <!-- Header -->
       <v-flex>
         <v-layout row>
-          <h3>{{ header }}</h3>
+          <h3 :style="{ fontSize: '20px' }">{{ header }}</h3>
         </v-layout>
       </v-flex>
       <!-- Description -->

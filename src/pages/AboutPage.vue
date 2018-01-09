@@ -1,6 +1,6 @@
 <!-- About Page -->
 <template>
-  <v-container text-xs-center class="width-limit-800">
+  <v-container text-xs-center class="about-page width-limit-800">
     <!-- Basic Info -->
     <basic-info-bar-row id="row"></basic-info-bar-row>
     <basic-info-bar-col id="col"></basic-info-bar-col>
@@ -101,5 +101,10 @@ export default {
   @media (min-width: 0px) and (max-width: 650px) {
     #row { display: none }
     #col { display: block }
+  }
+
+  .about-page {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 </style>

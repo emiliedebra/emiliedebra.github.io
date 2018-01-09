@@ -1,25 +1,31 @@
 <template>
   <v-app ref="app">
-    <v-container :fill-height="!enter" pt-0 class="title-container">
+
+    <!-- Before Enter -->
+    <v-container fill-height v-if="!enter" class="title-container">
       <v-layout column>
-
-        <!-- Before Enter -->
-        <name-bar key="name-center" v-if="!enter"></name-bar>
-        <enter-bar v-if="!enter" @enter="enterCV"></enter-bar>
-
-        <!-- After Enter -->
-        <transition name="slide-fade">
-          <name-bar v-if="enter"></name-bar>
-        </transition>
-        <transition name="slide-fade">
-          <title-bar key="title" v-if="enter" @changePage="change"></title-bar>
-        </transition>
+        <name-bar key="name-center"></name-bar>
+        <enter-bar @enter="enterCV"></enter-bar>
       </v-layout>
     </v-container>
+
+    <!-- After Enter -->
     <transition name="slide-fade">
-      <v-content v-if="enter">
-        <page-view :pressed="pageButton"></page-view>
-      </v-content>
+      <v-container v-if="enter" pl-0 pr-0>
+        <v-layout column>
+          <v-toolbar flat fixed text-xs-center app height='160px'>
+            <v-toolbar-items>
+              <v-layout column>
+                  <name-bar v-if="enter"></name-bar>
+                    <title-bar key="title"  @changePage="change"></title-bar>
+              </v-layout>
+            </v-toolbar-items>
+          </v-toolbar>
+            <v-content>
+                <page-view :pressed="pageButton"></page-view>
+            </v-content>
+        </v-layout>
+      </v-container>
     </transition>
   </v-app>
 </template>
@@ -34,13 +40,18 @@ export default {
   name: 'app',
   data() {
     return {
+      no: 'none',
       enter: false,
       pageButton: 'about',
+      scroll: true,
     };
   },
   computed: {
   },
   methods: {
+    onScroll() {
+      this.scroll = window.pageYOffset === 0;
+    },
     enterCV() {
       this.enter = true;
     },
@@ -79,9 +90,12 @@ export default {
   transition: all .3s ease;
 }
 .slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all .2s ease;
 }
-.slide-fade-enter, .slide-fade-leave-to {
+.slide-fade-leave-to {
+  opacity: 0;
+}
+.slide-fade-enter {
   transform: translateY(150px);
   opacity: 0;
 }
@@ -97,6 +111,18 @@ export default {
   /* background-color: #bdbdbd; */
   min-width: 200px;
   /* min-height: 400px; */
+}
+
+.content, .content__wrap {
+  padding: 0;
+}
+
+main.content {
+  padding: 0;
+}
+.toolbar__content {
+  justify-content: center;
+  background-color: #eeeeee;
 }
 
   /* Chip restyling */
