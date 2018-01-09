@@ -21,9 +21,9 @@
               </v-layout>
             </v-toolbar-items>
           </v-toolbar>
-            <v-content>
-                <page-view :pressed="pageButton"></page-view>
-            </v-content>
+          <v-content>
+              <page-view :pressed="pageButton"></page-view>
+          </v-content>
         </v-layout>
       </v-container>
     </transition>
@@ -143,6 +143,10 @@ main.content {
     border-color: #2c3e50;
 }
 
+.chip--selected {
+  background-color: #2c3e50 !important;
+}
+
  /* Container Restyling */
 .title-container {
     padding: 0;
@@ -192,5 +196,16 @@ h3 {
 
 h2 {
   font-weight: 200;
+}
+
+.head {
+  font-size: 25px;
+}
+.subhead {
+  font-size: 20px;
+}
+
+.italic {
+  font-style: italic;
 }
 </style>

@@ -5,7 +5,7 @@
     <v-layout column>
       <!-- Title -->
       <v-flex>
-        <h3>{{ title }}</h3>
+        <h3 class="subhead">{{ title }}</h3>
       </v-flex>
       <!-- Bullet Points -->
       <v-flex text-align-left>

@@ -2,12 +2,12 @@
 
 <template>
   <v-container flat text-xs-left class="education-page width-limit-500">
-    <h3 :style="{ fontSize: '25px' }">Tertiary Education</h3>
+    <h3 class="head">Tertiary Education</h3>
     <education-text v-for="item in tertiary" :key="item.title" :content="item"></education-text>
     <v-container class="divider-container" pa-0 pt-3 pb-3>
       <v-divider></v-divider>
     </v-container>
-    <h3 :style="{ fontSize: '25px' }">Secondary Education</h3>
+    <h3 class="head">Secondary Education</h3>
     <education-text v-for="item in secondary" :key="item.title" :content="item"></education-text>
   </v-container>
 </template>
