@@ -9,13 +9,15 @@
         </v-flex>
       </v-layout>
     </v-container>
-    <v-container class="width-limit-1000">
-      <v-layout row>
-        <v-flex>
-          <v-chip disabled :key="item.title" v-for="item in skillsSelected" @click.native="selectSkills(skills.indexOf(item))">{{ item.title }}</v-chip>
-        </v-flex>
-      </v-layout>
-    </v-container>
+      <v-container class="width-limit-1000">
+        <v-layout row>
+          <v-flex>
+            <transition-group name="fade-chip">
+              <v-chip close disabled :key="item.title" v-for="item in skillsSelected" @input="selectSkills(skills.indexOf(item))">{{ item.title }}</v-chip>
+            </transition-group>
+          </v-flex>
+        </v-layout>
+      </v-container>
     <transition-group name="reorder">
       <skills-text v-for="item in skillsExplained" :key="item.title" :title="item.title" :content="item.content"></skills-text>
     </transition-group>
@@ -29,7 +31,7 @@ export default {
   name: 'skills',
   data() {
     return {
-      skillsInitial:  [
+      skillsInitial: [
         {
           title: 'Vue.js and Related',
           content: [
@@ -482,5 +484,18 @@ export default {
 
 .reorder-move {
   transition: transform 1s;
+}
+
+.fade-chip-item {
+  transition: all 1s;
+  display: inline-block;
+  margin-right: 10px;
+}
+.fade-chip-enter, .fade-chip-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.fade-chip-leave-active {
+  position: absolute;
 }
 </style>
