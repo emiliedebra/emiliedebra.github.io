@@ -5,12 +5,12 @@
     <v-layout column>
       <!-- Header -->
       <v-flex>
-        <h3>{{ header }}</h3>
+        <h3 class="subhead">{{ header }}</h3>
       </v-flex>
       <!-- Content -->
       <v-flex text-align-left>
         <ul>{{ content.description }}</ul>
-        <ul>{{ content.additional }}</ul>
+        <ul class="italic">{{ content.additional }}</ul>
       </v-flex>
       <!-- <img src="logoLink" width="70px" height="70px"> -->
     </v-layout>

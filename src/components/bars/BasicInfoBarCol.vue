@@ -1,12 +1,12 @@
 <!-- Basic Info Bar -->
 
 <template>
-  <v-container>
+  <v-container class="about-page">
     <v-layout column>
       <!-- Avatar -->
       <v-flex>
         <v-avatar size="200px">
-          <img src="../../../static/img/icons/cv-image.gif">
+          <img src="../../assets/avatar.png">
         </v-avatar>
       </v-flex>
       <!-- Text Info -->
