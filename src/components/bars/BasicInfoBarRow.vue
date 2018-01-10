@@ -6,7 +6,7 @@
       <!-- Avatar -->
       <v-flex>
         <v-avatar size="200px">
-          <img src="../../assets/avatar.png">
+          <img src="../../../static/avatar.png">
         </v-avatar>
       </v-flex>
       <v-container>
