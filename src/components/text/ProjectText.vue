@@ -25,13 +25,12 @@
       </v-layout>
       <!-- Tech Chips -->
       <v-flex row>
-        <!-- <v-tooltip top> -->
           <v-chip disabled v-for="(item, index) in content.techUsed" :key="item.title" @click.native="show(item.content, index)" slot="activator" :selected="item.show">{{ item.title }}</v-chip>
-          <!-- <span>{{ item.content }}</span> -->
-        <!-- </v-tooltip> -->
       </v-flex>
-      <v-flex>
-        <ul v-if="showItem">{{ showItemContent }}</ul>
+      <v-flex pt-2>
+        <transition name="fade">
+          <ul class="italic" v-if="showItem">{{ showItemContent }}</ul>
+        </transition>
       </v-flex>
     </v-layout>
   </v-container>
@@ -68,3 +67,21 @@ export default {
   },
 };
 </script>
+<style>
+/* Transitions */
+.fade-enter-active {
+  transition: opacity 0.5s;
+}
+
+.fade-leave-active  {
+  transition: opacity 0.1s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0
+}
+
+.fade-enter-to, .fade-leave {
+  opacity: 1;
+}
+</style>
