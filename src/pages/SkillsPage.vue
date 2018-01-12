@@ -36,7 +36,7 @@ export default {
           title: 'Vue.js and Related',
           content: [
             'Front end development using Vue.js',
-            'HTTP requests handling using Vue Axios',
+            'HTTP request handling using Vue Axios',
             'State handling through Vuex',
             'Page routing through Vue Router',
             'Vuetify as a material design framework',
@@ -49,6 +49,7 @@ export default {
             'Vuetify',
             'Vue Router',
             'HTML5 and CSS',
+            'SWA',
           ],
         },
         {
@@ -60,6 +61,7 @@ export default {
           ],
           tags: [
             'Node.js',
+            'Javascript/ES6/7',
             'Flow',
             'Koa',
             'Express',
@@ -77,18 +79,18 @@ export default {
           title: 'Material Web Design',
           content: [
             'Development of reusable components in Polymer',
-            'Familiar with Material Design Guidelines',
+            'Familiarity with Material Design Guidelines',
           ],
           tags: [
-            'Polymer',
+            'Polymer.js',
             'Google Material Design',
           ],
         },
         {
           title: 'Progressive Web Applications',
           content: [
-            'Developed PWA using Vue CLI (this web-app)',
-            'Created mobile-friendly, scalable web-applications',
+            'Development of a PWA using Vue CLI (this web-app)',
+            'Creation of mobile-friendly, scalable web-applications',
           ],
           tags: [
             'Vue.js',
@@ -97,13 +99,15 @@ export default {
             'Vuetify',
             'Vue Router',
             'HTML5 and CSS',
+            'PWA',
           ],
         },
         {
           title: 'Computing Algorithms',
           content: [
-            'Studied basic Dynamic Programming implementations',
-            'Studied Decrease and Conquer, Divide and Conquer, Brute Force, Greedy Algorithms etc',
+            'Study of basic Dynamic Programming implementations',
+            'Study of Decrease and Conquer, Divide and Conquer, Brute Force, Greedy Algorithms etc',
+            'Implementation in Java',
           ],
           tags: [
             'Java',
@@ -134,8 +138,8 @@ export default {
         {
           title: 'Java, Java Swing',
           content: [
-            'Completed all Java university courses',
-            'Developed basic wordsearch game GUI using Swing',
+            'Completion of all Java university courses',
+            'Development of a basic game GUI using Swing',
           ],
           tags: [
             'Java',
@@ -156,14 +160,16 @@ export default {
           title: 'MatLab, LaTeX and Embedded C',
           content: [
             'Use of LaTeX for all University reports',
-            'Created audio synthesis using MatLab',
-            'Use of Embedded C in programming an STM32F4Discovery Evaluation Board and STM32F0',
+            'Audio synthesis using MatLab',
+            'Use of Embedded C in programming a STM32F4Discovery Evaluation Board and STM32F0',
           ],
           tags: [
             'C',
             'C++',
             'MatLab',
             'Latex',
+            'Assembly',
+            'RTOS',
           ],
         },
       ],
@@ -336,7 +342,7 @@ export default {
             // remove from original
             this.skillsExplained.splice(this.skillsExplained.indexOf(skill), 1);
             this.skillsExplained.splice(0, 0, skill);
-            break;
+            // break;
           }
         }
       }

@@ -72,13 +72,17 @@ export default {
       ],
       bio: {
         title: 'Bio',
-        content: `I am a recent UCT BSc Computer Science and Computer Engineering graduate.
+        content: `UCT BSc Computer Science and Computer Engineering graduate.\n
+
         I have a passion for problem solving, with a determined and positive attitude towards
         solving life's continuous complex problems. This is applied effectively in the software development industry,
         in which I have several years of student vacation work experience developing business applications -
-        both back end and front end. Whilst software engineering utilises my practical and technical side,
+        both backend and frontend.\n
+
+        Whilst software engineering utilises my practical and technical side,
         I am a music and dance enthusiast with the ability to approach design problems from
-        an artistic and creative perspective as well.
+        an artistic and creative perspective as well.\n
+
         My problem-solving ability is applied throughout all aspects of my life, and I am continuously seeking to gain knowledge.
         When not gaining this knowledge in a software environment, I am an advocate for self-improvement
         and am always striving to better my physical and mental health.`,

@@ -24,7 +24,7 @@ export default {
           institution: 'University of Cape Town',
           year: 'July 2017 - November 2017',
           description: 'BSc in Computer Science and Computer Engineering',
-          additional: 'Awarded Cum Laude graduation',
+          additional: 'Graduated with a 76.5% average',
           logo: 'logo',
         },
         {

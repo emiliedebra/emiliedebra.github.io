@@ -31,37 +31,39 @@ export default {
           techUsed: [
             {
               title: 'Vue.js',
-              content: 'Developement of web-application',
+              content: 'Used Vue CLI with Node.js as the basic technology behind the project. The app is bundled using Webpack.',
               show: false,
             },
             {
               title: 'Vuex',
-              content: 'Used for global app state handling',
+              content: `Used for global app state handling with a local store of
+              states shared between different pages in the app. Used for non-sensitive state handling.`,
               show: false,
             },
             {
               title: 'Vuetify',
-              content: 'Implementation of material design',
+              content: `Used as the basic material UI framework.
+              The app followed a standard layout that follows the Google Material Design guidelines`,
               show: false,
             },
             {
               title: 'Vue Axios',
-              content: 'HTTP request handling',
+              content: 'Used as the HTTP client library, implementing Promise handling.',
               show: false,
             },
             {
               title: 'Node.js',
-              content: 'Backend developement',
+              content: 'The backend of the app was developed (not fully by me), using an npm package ecosystem and ES6',
               show: false,
             },
             {
               title: 'Babel',
-              content: 'ES6 to browser compilation',
+              content: 'Package used for ES6 to ES5 translation',
               show: false,
             },
             {
               title: 'Express',
-              content: '',
+              content: 'Used as the web framework for Node.js',
               show: false,
             },
             {
@@ -80,17 +82,17 @@ export default {
           techUsed: [
             {
               title: 'C',
-              content: 'Programming language used for ARM',
+              content: 'Language chosen for all programming of the microcontrollers',
               show: false,
             },
             {
               title: 'Atollic',
-              content: 'Used for compilation and linking to STM',
+              content: 'IDE used for compilation and linking to STM microcontrollers',
               show: false,
             },
             {
               title: 'MatLab',
-              content: 'Audio waveform manipulation',
+              content: 'Used for performing audio waveform manipulation',
               show: false,
             },
             {
@@ -115,11 +117,11 @@ export default {
             },
             {
               title: 'Node.js',
-              content: 'Backend Development',
+              content: 'Exposure to using the package ecosystem (npm), with focus on babel, webpack and browserify',
             },
             {
               title: 'Flow',
-              content: 'Syntactical type-checking',
+              content: 'Implementation of syntactical type-checking',
             },
           ],
         },
@@ -132,11 +134,11 @@ export default {
           techUsed: [
             {
               title: 'Python',
-              content: 'Basic IO manipulation',
+              content: 'Basic text-based development',
             },
             {
               title: 'Java',
-              content: 'Basic IO interaction, Swing',
+              content: 'Basic application developement with the GUI implemented in Swing',
             },
           ],
         },
@@ -149,53 +151,49 @@ export default {
           techUsed: [
             {
               title: 'Python',
-              content: 'Basic IO manipulation',
+              content: 'Basic text-based development',
             },
             {
               title: 'Java',
-              content: 'Basic IO interaction, Swing',
+              content: 'Basic application developement with the GUI implemented in Swing',
             },
           ],
         },
         {
-          title: 'Vac Work',
+          title: 'Backend and Frontend Developer',
           company: 'AdvancedApps PTY Ltd.',
           date: 'January 2016 - January 2017',
-          description: `Part-time involvement in the back-end development of business applications using Javascript (ES6)
+          description: `Part-time involvement in the backend development of business applications using Javascript (ES6)
           and Node.js components which drew on technologies such as GraphQL, ArangoDB and Koa.
-          Some exposure to front-end technologies such as Google Polymer, HTML5 and CSS, as well as Google’s Material Design.`,
+          Some exposure to frontend technologies such as Google Polymer, HTML5 and CSS, as well as Google’s Material Design.`,
           techUsed: [
             {
               title: 'Javascript/ES6',
-              content: 'Development using modern syntax',
-            },
-            {
-              title: 'Node.js',
-              content: '',
+              content: 'Development of the backend of a simple messaging system using modern syntax',
             },
             {
               title: 'GraphQL',
-              content: 'NoSQL framework',
+              content: 'NoSQL framework used for database handling',
             },
             {
               title: 'ArangoDB',
-              content: 'Use of graph design',
+              content: 'Use of graph model, with some exposure to KV and document models',
             },
             {
               title: 'Koa',
-              content: '',
+              content: 'Used as the web framework for Node.js',
             },
             {
               title: 'Google Polymer',
-              content: 'Material Design familiarity',
+              content: 'Material Design familiarity and basic component creation',
             },
             {
-              title: 'HTM5 and CSS',
-              content: 'Use with Vue and Polymer',
+              title: 'HTML5 and CSS',
+              content: 'Good familiarity with HTML and CSS',
             },
             {
               title: 'Babel',
-              content: 'ES6 to broswer compatibility compilation',
+              content: 'ES6 to ES5 translation',
             },
           ],
         },
