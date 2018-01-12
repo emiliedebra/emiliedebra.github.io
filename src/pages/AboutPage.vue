@@ -11,8 +11,8 @@
     </v-container>
 
     <!-- Bio  -->
-    <v-card flat class="transparent">
-      <v-card-text>{{ bio.content }}</v-card-text>
+    <v-card flat v-for="item in bio.content" :key="item" class="transparent">
+      <v-card-text class="no-space">{{ item }}</v-card-text>
     </v-card>
 
     <!-- Buttons  -->
@@ -72,20 +72,22 @@ export default {
       ],
       bio: {
         title: 'Bio',
-        content: `UCT BSc Computer Science and Computer Engineering graduate.\n
+        content: [
+          'UCT BSc Computer Science and Computer Engineering graduate.',
 
-        I have a passion for problem solving, with a determined and positive attitude towards
-        solving life's continuous complex problems. This is applied effectively in the software development industry,
-        in which I have several years of student vacation work experience developing business applications -
-        both backend and frontend.\n
+          `I have a passion for problem solving, with a determined and positive attitude towards
+          solving life's continuous complex problems. This is applied effectively in the software development industry,
+          in which I have several years of student vacation work experience developing business applications -
+          both backend and frontend.`,
 
-        Whilst software engineering utilises my practical and technical side,
-        I am a music and dance enthusiast with the ability to approach design problems from
-        an artistic and creative perspective as well.\n
+          `Whilst software engineering utilises my practical and technical side,
+          I am a music and dance enthusiast with the ability to approach design problems from
+          an artistic and creative perspective as well.`,
 
-        My problem-solving ability is applied throughout all aspects of my life, and I am continuously seeking to gain knowledge.
-        When not gaining this knowledge in a software environment, I am an advocate for self-improvement
-        and am always striving to better my physical and mental health.`,
+          `My problem-solving ability is applied throughout all aspects of my life, and I am continuously
+          seeking to gain knowledge. When not gaining this knowledge in a software environment,
+          I am an advocate for self-improvement and am always striving to better my physical and mental health.`,
+        ],
       },
     };
   },
@@ -110,5 +112,10 @@ export default {
   .about-page {
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  .no-space {
+    padding-top: 0px;
+    padding-bottom: 16px;
   }
 </style>
