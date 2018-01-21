@@ -2,7 +2,7 @@
 <template>
   <v-container text-xs-center class="about-page width-limit-800">
     <!-- Basic Info -->
-    <basic-info-bar-row id="row"></basic-info-bar-row>
+    <!-- <basic-info-bar-row id="row"></basic-info-bar-row> -->
     <basic-info-bar-col id="col"></basic-info-bar-col>
 
     <!-- Divider  -->
@@ -42,34 +42,6 @@ export default {
     return {
       github: 'https://github.com/emiliedebra',
       linkedin: 'https://www.linkedin.com/in/emilie-wood/',
-      basic: [
-        {
-          title: 'Full Name',
-          content: 'Emilie Debra Wood',
-        },
-        {
-          title: 'Date of Birth',
-          content: '13th January 1997',
-        },
-        {
-          title: 'Place of Birth',
-          content: 'Cambridge, United Kingdom',
-        },
-      ],
-      additional: [
-        {
-          title: 'Email',
-          content: 'emilie@anotherway.co.za',
-        },
-        {
-          title: 'Citizenship',
-          content: 'British',
-        },
-        {
-          title: 'Availability',
-          content: '19th February 2018',
-        },
-      ],
       bio: {
         title: 'Bio',
         content: [
@@ -100,14 +72,14 @@ export default {
 </script>
 <style>
   /* Media Queries */
-  @media (min-width: 651px) {
+  /* @media (min-width: 651px) {
     #row { display: block }
     #col { display: none }
   }
   @media (min-width: 0px) and (max-width: 650px) {
     #row { display: none }
     #col { display: block }
-  }
+  } */
 
   .about-page {
     padding-top: 0;
