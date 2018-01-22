@@ -47,14 +47,12 @@ export default {
         content: [
           'UCT BSc Computer Science and Computer Engineering graduate.',
 
-          `I have a passion for problem solving, with a determined and positive attitude towards
-          solving life's continuous complex problems. This is applied effectively in the software development industry,
-          in which I have several years of student vacation work experience developing business applications -
-          both backend and frontend.`,
+          `With a passion for problem-solving, I have a determined and positive attitude towards life's
+          continuous complex problems. I have a strong work ethic which I have enjoyed applying to the challenges
+          of the software development environment through several years of work experience, both backend and frontend.`,
 
-          `Whilst software engineering utilises my practical and technical side,
-          I am a music and dance enthusiast with the ability to approach design problems from
-          an artistic and creative perspective as well.`,
+          `Together with software, I am a music and dance enthusiast and am able to approach design problems
+          from an artistic and creative perspective as well.`,
 
           `My problem-solving ability is applied throughout all aspects of my life, and I am continuously
           seeking to gain knowledge. When not gaining this knowledge in a software environment,
