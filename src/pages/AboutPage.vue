@@ -2,7 +2,7 @@
 <template>
   <v-container text-xs-center class="about-page width-limit-800">
     <!-- Basic Info -->
-    <!-- <basic-info-bar-row id="row"></basic-info-bar-row> -->
+    <basic-info-bar-row id="row"></basic-info-bar-row>
     <basic-info-bar-col id="col"></basic-info-bar-col>
 
     <!-- Divider  -->
@@ -72,14 +72,14 @@ export default {
 </script>
 <style>
   /* Media Queries */
-  /* @media (min-width: 651px) {
+  @media (min-width: 651px) {
     #row { display: block }
     #col { display: none }
   }
   @media (min-width: 0px) and (max-width: 650px) {
     #row { display: none }
     #col { display: block }
-  } */
+  }
 
   .about-page {
     padding-top: 0;

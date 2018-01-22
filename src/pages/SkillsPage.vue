@@ -37,38 +37,36 @@ export default {
           content: [
             'Front end development using Vue.js',
             'HTTP request handling using Vue Axios',
-            'State handling through Vuex',
-            'Page routing through Vue Router',
-            'Vuetify as a material design framework',
+            'Application state management using Vuex',
+            'Page routing using Vue Router',
+            'Vuetify as a material design framework with customisation',
             'Exposure to transitions and animations in Vue.js',
           ],
           tags: [
             'Vue.js',
             'Vuex',
-            'Vue Axios',
+            'Vue-Axios',
             'Vuetify',
-            'Vue Router',
+            'Vue-Router',
             'HTML5 and CSS',
-            'SWA',
+            'SPA',
           ],
         },
         {
           title: 'Node.js and Related',
           content: [
             'Development using Node.js and it’s package ecosystem (npm)',
-            'Exposure to packages such as Flow, Koa, Express, Rollup, Babel, Browserify and Webpack',
-            'Database handling using GraphQL, NoSQL, ArangoDB and MongoDB',
+            'Exposure to packages and frameworks such as Flow, Koa, Express, Rollup and Babel',
+            'Database handling using GraphQL, ArangoDB (NoSQL) and MongoDB',
           ],
           tags: [
             'Node.js',
-            'Javascript/ES6/7',
+            'Javascript/ES5/6/7',
             'Flow',
             'Koa',
             'Express',
             'Rollup',
             'Babel',
-            'Browserify',
-            'Webpack',
             'GraphQL',
             'NoSQL',
             'ArangoDB',
@@ -76,10 +74,42 @@ export default {
           ],
         },
         {
+          title: 'Testing with Mocha and Chai',
+          content: [
+            'Implementation of unit tests using Mocha framework',
+            'Use of Chai alongside Mocha',
+          ],
+          tags: [
+            'Mocha',
+            'Chai',
+          ],
+        },
+        {
+          title: 'HTTP and WebSockets',
+          content: [
+            'Development of socket communication and real-time messaging',
+            'Use of sockets for asynchronous communication',
+          ],
+          tags: [
+            'HTTP',
+            'WebSockets',
+          ],
+        },
+        {
+          title: 'Events',
+          content: [
+            'Use of EventEmitter through inheritance in custom classes',
+            'Familiarity with client-server emitters and listeners',
+          ],
+          tags: [
+            'EventEmitter',
+          ],
+        },
+        {
           title: 'Material Web Design',
           content: [
             'Development of reusable components in Polymer',
-            'Familiarity with Material Design Guidelines',
+            'Familiarity with Google Material Design Guidelines',
           ],
           tags: [
             'Polymer.js',
@@ -95,9 +125,9 @@ export default {
           tags: [
             'Vue.js',
             'Vuex',
-            'Vue Axios',
+            'Vue-Axios',
             'Vuetify',
-            'Vue Router',
+            'Vue-Router',
             'HTML5 and CSS',
             'PWA',
           ],
@@ -107,21 +137,21 @@ export default {
           content: [
             'Study of basic Dynamic Programming implementations',
             'Study of Decrease and Conquer, Divide and Conquer, Brute Force, Greedy Algorithms etc',
-            'Implementation in Java',
           ],
           tags: [
-            'Java',
+            'Algorithms',
           ],
         },
         {
           title: 'Concurrent Programming and Threading',
           content: [
-            'Development of basic threaded simulations in Java',
+            'Development of basic threaded simulations',
             'Understanding of Parallelism and Concurrency',
             'Exposure to common software problems such as Dining Philosophers',
           ],
           tags: [
-            'Java',
+            'Concurrency',
+            'Parallelism',
           ],
         },
         {
@@ -132,6 +162,7 @@ export default {
             'Exposure to design patterns (Layered, Repository, Client-Server etc)',
           ],
           tags: [
+            'Design Patterns',
           ],
 
         },
@@ -172,14 +203,16 @@ export default {
             'RTOS',
           ],
         },
+
       ],
       skills: [
+
         {
           title: 'Node.js',
           pressed: false,
         },
         {
-          title: 'Javascript/ES6/7',
+          title: 'Javascript/ES5/6/7',
           pressed: false,
         },
         {
@@ -187,15 +220,27 @@ export default {
           pressed: false,
         },
         {
+          title: 'Chai',
+          pressed: false,
+        },
+        {
+          title: 'Mocha',
+          pressed: false,
+        },
+        {
+          title: 'WebSockets',
+          pressed: false,
+        },
+        {
+          title: 'HTTP',
+          pressed: false,
+        },
+        {
+          title: 'EventEmitter',
+          pressed: false,
+        },
+        {
           title: 'Babel',
-          pressed: false,
-        },
-        {
-          title: 'Browserify',
-          pressed: false,
-        },
-        {
-          title: 'Webpack',
           pressed: false,
         },
         {
@@ -203,7 +248,11 @@ export default {
           pressed: false,
         },
         {
-          title: 'Java',
+          title: 'Koa',
+          pressed: false,
+        },
+        {
+          title: 'Rollup',
           pressed: false,
         },
         {
@@ -219,11 +268,11 @@ export default {
           pressed: false,
         },
         {
-          title: 'Vue Axios',
+          title: 'Vue-Axios',
           pressed: false,
         },
         {
-          title: 'Vue Router',
+          title: 'Vue-Router',
           pressed: false,
         },
         {
@@ -271,6 +320,10 @@ export default {
           pressed: false,
         },
         {
+          title: 'Java',
+          pressed: false,
+        },
+        {
           title: 'Python',
           pressed: false,
         },
@@ -291,15 +344,19 @@ export default {
           pressed: false,
         },
         {
-          title: 'Koa',
+          title: 'Parallelism',
           pressed: false,
         },
         {
-          title: 'Rollup',
+          title: 'Algorithms',
           pressed: false,
         },
         {
-          title: 'Yarn',
+          title: 'Concurrency',
+          pressed: false,
+        },
+        {
+          title: 'Design Patterns',
           pressed: false,
         },
       ],

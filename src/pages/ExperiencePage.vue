@@ -36,29 +36,29 @@ export default {
             },
             {
               title: 'Vuex',
-              content: `Used for global app state handling with a local store of
-              states shared between different pages in the app. Used for non-sensitive state handling.`,
+              content: `Used for global application state handling with a local store of
+              states shared between different pages in the application. Used for non-sensitive state handling.`,
               show: false,
             },
             {
               title: 'Vuetify',
               content: `Used as the basic material UI framework.
-              The app followed a standard layout that follows the Google Material Design guidelines`,
+              The app followed a standard layout that conforming to the Google Material Design guidelines`,
               show: false,
             },
             {
-              title: 'Vue Axios',
-              content: 'Used as the HTTP client library, implementing Promise handling.',
+              title: 'Vue-Axios',
+              content: 'Used as the HTTP client library, implementing Promise-based HTTP requests.',
               show: false,
             },
             {
               title: 'Node.js',
-              content: 'The backend of the app was developed (not fully by me), using an npm package ecosystem and ES6',
+              content: 'The backend of the application was developed using the npm package ecosystem and ES6/7',
               show: false,
             },
             {
               title: 'Babel',
-              content: 'Package used for ES6 to ES5 translation',
+              content: 'Used for transpiling ES6 to browser compatible code',
               show: false,
             },
             {
@@ -112,16 +112,16 @@ export default {
            Node.js and Flow. Currently tasked with writing exchange API’s.`,
           techUsed: [
             {
-              title: 'Javascript/ES6/7',
+              title: 'Javascript/ES5/6/7',
               content: 'Familiarity with modern syntax',
             },
             {
               title: 'Node.js',
-              content: 'Exposure to using the package ecosystem (npm), with focus on babel, webpack and browserify',
+              content: 'Development using a Node environement with exposure to the package ecosystem (npm)',
             },
             {
               title: 'Flow',
-              content: 'Implementation of syntactical type-checking',
+              content: 'Implementation of the framework used for syntactical type-checking',
             },
           ],
         },
@@ -168,12 +168,12 @@ export default {
           Some exposure to frontend technologies such as Google Polymer, HTML5 and CSS, as well as Google’s Material Design.`,
           techUsed: [
             {
-              title: 'Javascript/ES6',
+              title: 'Javascript/ES5/6',
               content: 'Development of the backend of a simple messaging system using modern syntax',
             },
             {
               title: 'GraphQL',
-              content: 'NoSQL framework used for database handling',
+              content: 'Query language and server-side runtime used for data handling',
             },
             {
               title: 'ArangoDB',
@@ -185,15 +185,15 @@ export default {
             },
             {
               title: 'Google Polymer',
-              content: 'Material Design familiarity and basic component creation',
+              content: 'Material Design familiarity and basic component creation and customisation',
             },
             {
               title: 'HTML5 and CSS',
-              content: 'Good familiarity with HTML and CSS',
+              content: 'Good familiarity with HTML and CSS for customising components',
             },
             {
               title: 'Babel',
-              content: 'ES6 to ES5 translation',
+              content: 'Used for transpiling ES6 to browser compatible code',
             },
           ],
         },

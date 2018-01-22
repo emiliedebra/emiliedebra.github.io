@@ -38,9 +38,15 @@ export default {
           content: 'Emilie Debra Wood',
         },
         {
+          title: 'Date of Birth',
+          content: '13th January 1997',
+        },
+        {
           title: 'Email',
           content: 'emilie@anotherway.co.za',
         },
+      ],
+      additional: [
         {
           title: 'Citizenship',
           content: 'British',
@@ -49,17 +55,6 @@ export default {
           title: 'Availability',
           content: '19th February 2018',
         },
-        // {
-        //   title: 'Date of Birth',
-        //   content: '13th January 1997',
-        // },
-        // {
-        //   title: 'Place of Birth',
-        //   content: 'Cambridge, United Kingdom',
-        // },
-      ],
-      additional: [
-
       ],
     };
   },
