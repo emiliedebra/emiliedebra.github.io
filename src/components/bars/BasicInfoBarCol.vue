@@ -54,7 +54,7 @@ export default {
         },
         {
           title: 'Availability',
-          content: '19th February 2018',
+          content: 'Immediate',
         },
       ],
     };
