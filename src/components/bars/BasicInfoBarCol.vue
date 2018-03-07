@@ -52,10 +52,10 @@ export default {
           title: 'Citizenship',
           content: 'British',
         },
-        {
-          title: 'Availability',
-          content: 'Immediate',
-        },
+        // {
+        //   title: 'Availability',
+        //   content: 'Immediate',
+        // },
       ],
     };
   },
