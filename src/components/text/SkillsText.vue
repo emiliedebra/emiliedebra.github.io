@@ -9,9 +9,7 @@
       </v-flex>
       <!-- Bullet Points -->
       <v-flex text-align-left>
-        <li v-for="item in content" :key="item">
-          {{ item }}
-        </li>
+        <li v-for="item in content" :key="item">{{ item }}</li>
       </v-flex>
     </v-layout>
   </v-container>
@@ -19,7 +17,7 @@
 
 <script>
 export default {
-  name: 'skills-text',
-  props: ['title', 'content'],
+  name: "skills-text",
+  props: ["title", "content"]
 };
 </script>

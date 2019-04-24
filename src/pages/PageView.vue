@@ -12,43 +12,43 @@
 </template>
 
 <script>
-import AboutPage from './AboutPage.vue';
-import EducationPage from './EducationPage.vue';
-import SkillsPage from './SkillsPage.vue';
-import ExperiencePage from './ExperiencePage.vue';
+import AboutPage from "./AboutPage.vue";
+import EducationPage from "./EducationPage.vue";
+import SkillsPage from "./SkillsPage.vue";
+import ExperiencePage from "./ExperiencePage.vue";
 
 export default {
-  name: 'home',
-  props: ['pressed'],
+  name: "home",
+  props: ["pressed"],
   components: {
     AboutPage,
     EducationPage,
     SkillsPage,
-    ExperiencePage,
-  },
+    ExperiencePage
+  }
 };
 </script>
 
 <style>
-
 .page {
   padding: 0;
 }
 
- /* Transitions */
+/* Transitions */
 .fade-enter-active {
   transition: opacity 0.5s;
 }
 
-.fade-leave-active  {
+.fade-leave-active {
   transition: opacity 0.1s;
 }
 
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0
+  opacity: 0;
 }
 
-.fade-enter-to, .fade-leave {
+.fade-enter-to,
+.fade-leave {
   opacity: 1;
 }
 </style>

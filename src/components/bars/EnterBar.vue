@@ -8,14 +8,13 @@
 </template>
 
 <script>
-
 export default {
-  name: 'enter-bar',
+  name: "enter-bar",
   methods: {
     enter() {
-      this.$emit('enter');
-    },
-  },
+      this.$emit("enter");
+    }
+  }
 };
 </script>
 <style>

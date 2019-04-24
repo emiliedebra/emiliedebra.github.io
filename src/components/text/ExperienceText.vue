@@ -14,13 +14,20 @@
         <ul>{{ content.description }}</ul>
       </v-flex>
       <!-- Tech Chips -->
-      <v-flex row >
+      <v-flex row>
         <!-- <v-tooltip top> -->
-          <v-chip disabled v-for="(item, index) in content.techUsed" :key="item.title" @click.native="show(item.content, index)" slot="activator" :selected="item.show">{{ item.title }}</v-chip>
-          <!-- <span>{{ item.content }}</span> -->
+        <v-chip
+          disabled
+          v-for="(item, index) in content.techUsed"
+          :key="item.title"
+          @click.native="show(item.content, index)"
+          slot="activator"
+          :selected="item.show"
+        >{{ item.title }}</v-chip>
+        <!-- <span>{{ item.content }}</span> -->
         <!-- </v-tooltip> -->
       </v-flex>
-       <v-flex pt-2>
+      <v-flex pt-2>
         <transition name="fade">
           <ul class="italic" v-if="showItem">{{ showItemContent }}</ul>
         </transition>
@@ -31,17 +38,19 @@
 
 <script>
 export default {
-  name: 'experience-text',
-  props: ['content'],
+  name: "experience-text",
+  props: ["content"],
   computed: {
     header() {
-      return `${this.content.title} | ${this.content.company} | ${this.content.date}`;
-    },
+      return `${this.content.title} | ${this.content.company} | ${
+        this.content.date
+      }`;
+    }
   },
   data() {
     return {
       showItem: false,
-      showItemContent: null,
+      showItemContent: null
     };
   },
   methods: {
@@ -61,8 +70,8 @@ export default {
       for (const item of this.content.techUsed) {
         item.show = false;
       }
-    },
-  },
+    }
+  }
 };
 </script>
 <style>
@@ -71,15 +80,16 @@ export default {
   transition: opacity 0.5s;
 }
 
-.fade-leave-active  {
+.fade-leave-active {
   transition: opacity 0.1s;
 }
 
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0
+  opacity: 0;
 }
 
-.fade-enter-to, .fade-leave {
+.fade-enter-to,
+.fade-leave {
   opacity: 1;
 }
 </style>

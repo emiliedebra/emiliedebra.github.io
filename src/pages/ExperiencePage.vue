@@ -114,15 +114,14 @@ export default {
           title: "Full Stack Developer",
           company: "kwiff - Eaton Gate Gaming",
           date: "March 2018 - Present",
-          description: `Involvement in external provider integrations with a microservice architecture, using Node.js and ES7.
-          General bug fixing within the exisiting microservices.
-          General MySQL query/mutation building.
-          Building of a selection generator, converting GraphQL queries from within resolvers into MySQL queries.
-          Building of React progressive web applications from scratch to mimic existing native applications.
-          Refactor work using Typescript and GraphQL.`,
+          description: `Built and maintained integration microservices with external service providers, using Node.js and ES7.
+          Added features within exisiting microservices.
+          Built a selection generator, converting GraphQL queries from within resolvers into MySQL queries.
+          Took the lead in building from scratch and maintaining multiple React progressive web applications (PWAs), in conjuction with Typescript, Material-UI and GraphQL, replacing large parts of an existing native application as part of a company-wide tech migration.
+          Involvement in backend refactor design and architectural planning as well as implementation to simplify the current system and to use Typescript and a stitched GraphQL schema, as part of a company-wide tech migration.`,
           techUsed: [
             {
-              title: "Javascript/ES5/6/7",
+              title: "Javascript/ES7",
               content: "Familiarity with modern syntax"
             },
             {
@@ -137,23 +136,22 @@ export default {
             },
             {
               title: "React",
-              content:
-                "Built-from-scratch PWA projects to mimic a native application"
+              content: "Built-from-scratch PWA, SPA projects"
             },
             {
-              title: "Material-UI",
+              title: "Material UI",
               content: "UI Framework used for React work"
             },
             {
               title: "GraphQL",
-              content: "Schema-stitching architecture."
+              content: "Schema-stitching architecture"
             }
           ]
         },
         {
           title: "Backend Developer",
           company: "AnotherwayTech",
-          date: "December 2017 - Present",
+          date: "December 2017 - January 2018",
           description: `Involvement in the back-end development of a CryptoCurrency trading system using Javascript/ES6/7,
            Node.js and Flow. Currently tasked with writing exchange API’s.`,
           techUsed: [
