@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'info-text',
-  props: ['title', 'content'],
+  name: "info-text",
+  props: ["title", "content"]
 };
 </script>

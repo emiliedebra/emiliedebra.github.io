@@ -28,37 +28,37 @@
 
 <script>
 export default {
-  name: 'title-bar',
+  name: "title-bar",
   data() {
     return {
       screenSize: false,
       selected: 0,
-      menuName: 'About Me',
+      menuName: "About Me",
       menuItems: [
         {
-          title: 'About Me',
-          number: 0,
+          title: "About Me",
+          number: 0
         },
         {
-          title: 'Skills',
-          number: 1,
+          title: "Skills",
+          number: 1
         },
         {
-          title: 'Experience',
-          number: 2,
+          title: "Experience",
+          number: 2
         },
         {
-          title: 'Education',
-          number: 3,
-        },
-      ],
+          title: "Education",
+          number: 3
+        }
+      ]
     };
   },
   watch: {
     selected() {
       this.menuName = this.menuItems[this.selected].title;
-      this.$emit('changePage', this.selected);
-    },
+      this.$emit("changePage", this.selected);
+    }
   },
   methods: {
     select(item) {
@@ -71,41 +71,50 @@ export default {
       } else {
         this.screenSize = true;
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style>
-  /* Media Queries */
-  @media (min-width: 651px) {
-    #full { display: block }
-    #small { display: none }
+/* Media Queries */
+@media (min-width: 651px) {
+  #full {
+    display: block;
   }
+  #small {
+    display: none;
+  }
+}
 
-  @media (min-width: 0px) and (max-width: 650px) {
-    #full { display: none }
-    #small { display: block }
+@media (min-width: 0px) and (max-width: 650px) {
+  #full {
+    display: none;
   }
+  #small {
+    display: block;
+  }
+}
 
-  /* Button Restyling */
-  .theme--light .btn-toggle {
-    background: none;
-  }
-  .btn-toggle--selected {
-    box-shadow: none;
-  }
-  .btn__content {
-    font-weight: 300;
-    font-size: 20px;
-  }
-  .btn--active .btn__content:before, .btn:focus .btn__content:before, .btn:hover .btn__content:before {
-    background-color: none;
-    outline: black;
-  }
-  .title {
-    padding: 0;
-    margin: 0;
-  }
-
+/* Button Restyling */
+.theme--light .btn-toggle {
+  background: none;
+}
+.btn-toggle--selected {
+  box-shadow: none;
+}
+.btn__content {
+  font-weight: 300;
+  font-size: 20px;
+}
+.btn--active .btn__content:before,
+.btn:focus .btn__content:before,
+.btn:hover .btn__content:before {
+  background-color: none;
+  outline: black;
+}
+.title {
+  padding: 0;
+  margin: 0;
+}
 </style>

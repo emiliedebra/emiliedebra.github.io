@@ -1,6 +1,5 @@
 <template>
   <v-app ref="app">
-
     <!-- Before Enter -->
     <v-container fill-height v-if="!enter" class="title-container">
       <v-layout column>
@@ -14,17 +13,17 @@
       <!-- <v-parallax src="../static/img/background/mona-eendra-208388.jpg"> -->
       <v-container v-if="enter" pl-0 pr-0>
         <v-layout column>
-          <v-toolbar flat fixed text-xs-center app height='160px'>
+          <v-toolbar flat fixed text-xs-center app height="160px">
             <v-toolbar-items>
               <v-layout column>
-                  <name-bar v-if="enter"></name-bar>
-                    <title-bar key="title"  @changePage="change"></title-bar>
+                <name-bar v-if="enter"></name-bar>
+                <title-bar key="title" @changePage="change"></title-bar>
               </v-layout>
             </v-toolbar-items>
           </v-toolbar>
-              <v-content>
-                <page-view :pressed="pageButton"></page-view>
-              </v-content>
+          <v-content>
+            <page-view :pressed="pageButton"></page-view>
+          </v-content>
         </v-layout>
       </v-container>
       <!-- </v-parallax> -->
@@ -33,23 +32,22 @@
 </template>
 
 <script>
-import NameBar from '../src/components/bars/NameBar.vue';
-import TitleBar from '../src/components/bars/TitleBar.vue';
-import EnterBar from '../src/components/bars/EnterBar.vue';
-import PageView from '../src/pages/PageView.vue';
+import NameBar from "../src/components/bars/NameBar.vue";
+import TitleBar from "../src/components/bars/TitleBar.vue";
+import EnterBar from "../src/components/bars/EnterBar.vue";
+import PageView from "../src/pages/PageView.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   data() {
     return {
-      no: 'none',
+      no: "none",
       enter: false,
-      pageButton: 'about',
-      scroll: true,
+      pageButton: "about",
+      scroll: true
     };
   },
-  computed: {
-  },
+  computed: {},
   methods: {
     onScroll() {
       this.scroll = window.pageYOffset === 0;
@@ -60,39 +58,38 @@ export default {
     change(prop) {
       switch (prop) {
         case 0:
-          this.pageButton = 'about';
+          this.pageButton = "about";
           break;
         case 1:
-          this.pageButton = 'skills';
+          this.pageButton = "skills";
           break;
         case 2:
-          this.pageButton = 'experience';
+          this.pageButton = "experience";
           break;
         case 3:
-          this.pageButton = 'education';
+          this.pageButton = "education";
           break;
         default:
           this.pageButton = null;
       }
-    },
+    }
   },
   components: {
     NameBar,
     TitleBar,
     EnterBar,
-    PageView,
-  },
+    PageView
+  }
 };
 </script>
 
 <style>
-
- /* Transitions */
+/* Transitions */
 .slide-fade-enter-active {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .slide-fade-leave-active {
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 .slide-fade-leave-to {
   opacity: 0;
@@ -104,7 +101,7 @@ export default {
 
 /* App Restyling */
 #app {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #2c3e50;
   background-color: #eeeeee;
   /* background-color: #e8eaf6; */
@@ -116,7 +113,8 @@ export default {
   /* min-height: 400px; */
 }
 
-.content, .content__wrap {
+.content,
+.content__wrap {
   padding: 0;
 }
 
@@ -130,8 +128,9 @@ main.content {
   /* background-color: #e8eaf6; */
 }
 
-  /* Chip restyling */
-.application .theme--light.chip, .theme--light .chip {
+/* Chip restyling */
+.application .theme--light.chip,
+.theme--light .chip {
   background-color: grey-lighten-3;
   /* background-color: #ddc2cac2; */
   /* background-color: #fce4ec; */
@@ -144,9 +143,10 @@ main.content {
   color: #1b1b1b;
 }
 
-.chip:hover, .chip.chip--outline:hover {
-    background-color: #135e5ab6;
-    border-color: #135e5ab6;
+.chip:hover,
+.chip.chip--outline:hover {
+  background-color: #135e5ab6;
+  border-color: #135e5ab6;
 }
 
 .chip--selected {
@@ -156,13 +156,13 @@ main.content {
   background-color: #135e5ab6 !important;
 }
 
- /* Container Restyling */
+/* Container Restyling */
 .title-container {
-    padding: 0;
-    padding-top: 20px;
-    max-width: 650px;
-    max-height: 174px;
-    /* min-height: 180px; */
+  padding: 0;
+  padding-top: 20px;
+  max-width: 650px;
+  max-height: 174px;
+  /* min-height: 180px; */
 }
 
 .divider-container {
@@ -172,7 +172,7 @@ main.content {
   padding-top: 3;
 }
 
- /* Custom Classes */
+/* Custom Classes */
 .width-limit-500 {
   max-width: 500px;
 }

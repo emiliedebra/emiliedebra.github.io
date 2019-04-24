@@ -13,42 +13,41 @@
 </template>
 
 <script>
-import EducationText from '../components/text/EducationText.vue';
+import EducationText from "../components/text/EducationText.vue";
 
 export default {
-  name: 'education',
+  name: "education",
   data() {
     return {
       tertiary: [
         {
-          institution: 'University of Cape Town',
-          year: 'July 2017 - November 2017',
-          description: 'BSc in Computer Science and Computer Engineering',
-          additional: 'Graduated with a 76.5% average',
-          logo: 'logo',
+          institution: "University of Cape Town",
+          year: "July 2017 - November 2017",
+          description: "BSc in Computer Science and Computer Engineering",
+          additional: "Graduated with a 76.5% average",
+          logo: "logo"
         },
         {
-          institution: 'University of Cape Town',
-          year: '2015 – July 2017',
-          description: 'BSc Eng in Electrical and Computer Engineering',
-          additional: 'Dean\'s Merit List Student for 2015, 2016 and 2017',
-          logo: 'Port_Shepstone_High_School.gif',
-
-        },
+          institution: "University of Cape Town",
+          year: "2015 – July 2017",
+          description: "BSc Eng in Electrical and Computer Engineering",
+          additional: "Dean's Merit List Student for 2015, 2016 and 2017",
+          logo: "Port_Shepstone_High_School.gif"
+        }
       ],
       secondary: [
         {
-          institution: 'Port Shepstone High School',
-          year: '2010 - 2014',
-          description: 'National Senior Certificate',
-          additional: 'Awarded Dux of the School',
-        },
-      ],
+          institution: "Port Shepstone High School",
+          year: "2010 - 2014",
+          description: "National Senior Certificate",
+          additional: "Awarded Dux of the School"
+        }
+      ]
     };
   },
   components: {
-    EducationText,
-  },
+    EducationText
+  }
 };
 </script>
 <style>

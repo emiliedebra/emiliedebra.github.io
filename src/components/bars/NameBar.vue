@@ -10,30 +10,38 @@
 
 <script>
 export default {
-  name: 'name-bar',
+  name: "name-bar",
   data() {
     return {
-      name: 'emilie debra wood',
-      initials: 'edw',
+      name: "emilie debra wood",
+      initials: "edw"
     };
-  },
+  }
 };
 </script>
 
 <style>
-  /* Media Queries */
-  @media (min-width: 651px) {
-    #small { display: none }
-    #full { display: block }
+/* Media Queries */
+@media (min-width: 651px) {
+  #small {
+    display: none;
   }
+  #full {
+    display: block;
+  }
+}
 
-  @media (min-width: 0px) and (max-width: 650px) {
-    #full { display: none }
-    #small { display: block }
+@media (min-width: 0px) and (max-width: 650px) {
+  #full {
+    display: none;
   }
+  #small {
+    display: block;
+  }
+}
 
-  .name-container {
-    padding-bottom: 0;
-    padding-top: 0;
-  }
+.name-container {
+  padding-bottom: 0;
+  padding-top: 0;
+}
 </style>

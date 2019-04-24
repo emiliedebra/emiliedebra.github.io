@@ -19,8 +19,8 @@
 
 <script>
 export default {
-  name: 'education-text',
-  props: ['content'],
+  name: "education-text",
+  props: ["content"],
   computed: {
     header() {
       return `${this.content.institution} | ${this.content.year}`;
@@ -28,7 +28,7 @@ export default {
     logoLink() {
       // not used at this point
       return `../../assets/${this.content.logo}`;
-    },
-  },
+    }
+  }
 };
 </script>
